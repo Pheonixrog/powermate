@@ -38,18 +38,18 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <div className="w-full h-full bg-gradient-to-b from-gray-900 to-purple-950">
-      <ScrollRevealCard index={3} className="p-12 md:p-20">
+    <div className="w-full h-full bg-gradient-to-b from-gray-900 to-purple-950 px-4 md:px-8">
+      <ScrollRevealCard index={3} className="p-6 md:p-12 lg:p-20">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <EnhancedTypography 
               text="Frequently Asked Questions" 
-              className="text-4xl md:text-5xl font-bold mb-6 text-center"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-center"
               gradient={true}
             />
             <EnhancedTypography 
               text="Common questions from our users." 
-              className="text-xl md:text-2xl mb-12 text-center text-gray-300"
+              className="text-lg md:text-xl lg:text-2xl mb-8 md:mb-12 text-center text-gray-300"
             />
             <div className="space-y-4">
               {faqs.map((faq, index) => (
@@ -62,17 +62,17 @@ export function FAQ() {
                 >
                   <Card className="bg-gray-900/50 backdrop-blur-sm border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
                     <CardHeader 
-                      className="cursor-pointer"
+                      className="cursor-pointer p-4 md:p-6"
                       onClick={() => setOpenIndex(openIndex === index ? null : index)}
                     >
-                      <CardTitle className="flex justify-between items-center text-xl">
+                      <CardTitle className="flex justify-between items-center text-base md:text-lg lg:text-xl">
                         <span>{faq.question}</span>
                         <motion.div
                           animate={{ rotate: openIndex === index ? 180 : 0 }}
                           transition={{ duration: 0.3 }}
                           className="p-2 rounded-full bg-purple-500/10"
                         >
-                          <ChevronDown className="w-5 h-5 text-purple-400" />
+                          <ChevronDown className="w-4 h-4 md:w-5 md:h-5 text-purple-400" />
                         </motion.div>
                       </CardTitle>
                     </CardHeader>
@@ -84,8 +84,8 @@ export function FAQ() {
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.3 }}
                         >
-                          <CardContent>
-                            <p className="text-lg text-gray-300">{faq.answer}</p>
+                          <CardContent className="px-4 md:px-6 py-2 md:py-4">
+                            <p className="text-sm md:text-base lg:text-lg text-gray-300">{faq.answer}</p>
                           </CardContent>
                         </motion.div>
                       )}
