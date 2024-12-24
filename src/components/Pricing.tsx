@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import { ScrollReveal } from './ScrollReveal'
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card"
