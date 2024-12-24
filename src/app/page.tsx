@@ -12,7 +12,7 @@ import { FAQ } from "@/components/FAQ";
 import { Pricing } from "@/components/Pricing";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { AboutUs } from "@/components/AboutUs";
-import { Download, Apple } from 'lucide-react';
+import { Download, Apple } from "lucide-react";
 
 export default function Page() {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,11 +26,11 @@ export default function Page() {
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-950 to-teal-200">
       <Navbar />
       <main className="flex-grow">
-        <ScrollReveal >
+        <ScrollReveal>
           <section className="py-12 md:py-20 ">
             <div className="container mx-auto px-4">
               <div className="flex flex-col items-center justify-center mb-8 md:mb-12">
-                <h1 className="text-[150px] md:text-[200px] lg:text-[220px] font-bold text-center overflow-hidden relative flex flex-wrap items-center justify-center gap-2 md:gap-4">
+                <h1 className="text-[150px] md:text-[150px] lg:text-[220px] font-bold text-center overflow-hidden relative flex flex-wrap items-center justify-center gap-2 md:gap-4">
                   <span className="relative z-10 leading-none">
                     {"P".split("").map((char, index) => (
                       <span
@@ -39,7 +39,9 @@ export default function Page() {
                         style={{
                           transitionDelay: `${index * 50}ms`,
                           opacity: isVisible ? 1 : 0,
-                          transform: isVisible ? "translateY(0)" : "translateY(20px)",
+                          transform: isVisible
+                            ? "translateY(0)"
+                            : "translateY(20px)",
                         }}
                       >
                         {char}
@@ -47,7 +49,10 @@ export default function Page() {
                     ))}
                   </span>
                   <div className="flex items-center justify-center w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px]">
-                    <iframe className="w-full h-full" src="https://lottie.host/embed/86f8b081-70bc-4c9a-b73a-5ad19fa04101/58LqzG2pjg.lottie"></iframe>
+                    <iframe
+                      className="w-full h-full"
+                      src="https://lottie.host/embed/86f8b081-70bc-4c9a-b73a-5ad19fa04101/58LqzG2pjg.lottie"
+                    ></iframe>
                   </div>
                   <span className="relative z-10 leading-none">
                     {"wermate".split("").map((char, index) => (
@@ -57,7 +62,9 @@ export default function Page() {
                         style={{
                           transitionDelay: `${(index + 1) * 50}ms`,
                           opacity: isVisible ? 1 : 0,
-                          transform: isVisible ? "translateY(0)" : "translateY(20px)",
+                          transform: isVisible
+                            ? "translateY(0)"
+                            : "translateY(20px)",
                         }}
                       >
                         {char}
@@ -84,8 +91,8 @@ export default function Page() {
                     <button className="flex items-center justify-center gap-2 bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
                       <Download size={24} />
                       <a href="https://play.google.com/store/apps/details?id=com.appspot.powermateapp">
-                      Play Store</a>
-                     
+                        Play Store
+                      </a>
                     </button>
                     <button className="flex items-center justify-center gap-2 bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
                       <Apple size={24} />
@@ -97,7 +104,6 @@ export default function Page() {
                   <img src="/anime1.svg" alt="" />
                 </div>
               </div>
-            
             </div>
           </section>
         </ScrollReveal>
