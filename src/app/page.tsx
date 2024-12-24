@@ -30,7 +30,7 @@ export default function Page() {
           <section className="py-12 md:py-20 ">
             <div className="container mx-auto px-4">
               <div className="flex flex-col items-center justify-center mb-8 md:mb-12">
-                <h1 className="text-[150px] md:text-[150px] lg:text-[220px] font-bold text-center overflow-hidden relative flex flex-wrap items-center justify-center gap-2 md:gap-4">
+                <h1 className="text-[150px] md:text-[150px] lg:text-[200px] font-bold text-center overflow-hidden relative flex flex-wrap items-center justify-center gap-2 md:gap-4">
                   <span className="relative z-10 leading-none">
                     {"P".split("").map((char, index) => (
                       <span
@@ -48,7 +48,7 @@ export default function Page() {
                       </span>
                     ))}
                   </span>
-                  <div className="flex items-center justify-center w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px]">
+                  <div className="flex items-center justify-center w-[150px] h-[150px] md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px]">
                     <iframe
                       className="w-full h-full"
                       src="https://lottie.host/embed/86f8b081-70bc-4c9a-b73a-5ad19fa04101/58LqzG2pjg.lottie"
