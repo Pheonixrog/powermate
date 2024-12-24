@@ -24,7 +24,7 @@ export function AboutUs() {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                At Powermate, we're here to help you manage your screen time with support from friends. We understand how tough it can be to stop doom scrolling through your favorite apps, which is why we created Powermate - a fun, gamified app that helps you limit your screen time with the accountability of your friends and family. Together, let's reduce your time online and focus on what truly matters!
+                At Powermate, we&apos;re here to help you manage your screen time with support from friends. We understand how tough it can be to stop doom scrolling through your favorite apps, which is why we created Powermate - a fun, gamified app that helps you limit your screen time with the accountability of your friends and family. Together, let&apos;s reduce your time online and focus on what truly matters!
               </motion.p>
               <div className="grid md:grid-cols-2 gap-8">
                 <motion.div

@@ -25,7 +25,7 @@ export function WhatIsPowermate() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 blur-xl opacity-20" />
                 <p className="relative text-xl md:text-2xl text-gray-300 leading-relaxed">
-                  We know it's hard to stop doomscrolling, so we made a gamified app where friends and family help keep you accountable. Let's cut back on screen time and focus on what matters!
+                  We know it&apos;s hard to stop doomscrolling, so we made a gamified app where friends and family help keep you accountable. Let&apos;s cut back on screen time and focus on what matters!
                 </p>
               </div>
             </motion.div>
