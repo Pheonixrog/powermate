@@ -30,7 +30,7 @@ export default function Page() {
           <section className="py-12 md:py-20 ">
             <div className="container mx-auto px-4">
               <div className="flex flex-col items-center justify-center mb-8 md:mb-12">
-                <h1 className="text-[150px] md:text-[150px] lg:text-[200px] font-bold text-center overflow-hidden relative flex flex-wrap items-center justify-center gap-2 md:gap-4">
+                <h1 className="text-[150px] md:text-[150px] lg:text-[180px] font-bold text-center overflow-hidden relative flex flex-wrap items-center justify-center gap-2 md:gap-4">
                   <span className="relative z-10 leading-none">
                     {"P".split("").map((char, index) => (
                       <span
