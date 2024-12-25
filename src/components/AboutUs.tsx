@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 
 export function AboutUs() {
   return (
-    <ScrollRevealCard index={4} className="p-12 md:p-20" backgroundColor="bg-gradient-to-t from-teal-950 to-gray-400">
+    <ScrollRevealCard index={4} className="p-12 md:p-20" >
       <div className="container h-screen w-screen mx-auto flex justify-center items-center">
         
         <div className="max-w-4xl mx-auto ">

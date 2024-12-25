@@ -22,7 +22,7 @@ export function NewsletterSignup() {
   }
 
   return (
-    <section className="py-16 h-screen bg-gray-900 flex items-center justify-center">
+    <section className="py-16 h-screen  flex items-center justify-center">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

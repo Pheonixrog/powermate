@@ -28,7 +28,7 @@ const reviews = [
 
 export function UserReviews() {
   return (
-    <FullScreenSection id="reviews" className="bg-gradient-to-b from-gray-900 to-purple-950">
+    <FullScreenSection id="reviews" >
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
           <EnhancedTypography 

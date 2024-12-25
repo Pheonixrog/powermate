@@ -23,11 +23,11 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-950 to-teal-200">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-950 via-teal-950 to-gray-950">
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow ">
         <ScrollReveal>
-          <section className="py-12 md:py-20 ">
+          <section className="py-12 md:py-20  ">
             <div className="container mx-auto px-4">
               <div className="flex flex-col items-center justify-center mb-8 md:mb-12">
                 <h1 className="text-[150px] md:text-[150px] lg:text-[180px] font-bold text-center overflow-hidden relative flex flex-wrap items-center justify-center gap-2 md:gap-4">

@@ -14,7 +14,7 @@ const steps = [
 
 export function HowPowermateWorks() {
   return (
-    <FullScreenSection id="how" className="bg-gradient-to-b from-purple-950 to-gray-900">
+    <FullScreenSection id="how" >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <span className="text-purple-400 text-sm font-mono mb-4 block">02 - HOW IT WORKS</span>

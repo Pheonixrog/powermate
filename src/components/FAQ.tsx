@@ -38,7 +38,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <div className="w-full h-full bg-gradient-to-b from-gray-900 to-purple-950 px-4 md:px-8">
+    <div className="w-full h-full  px-4 md:px-8">
       <ScrollRevealCard index={3} className="p-6 md:p-12 lg:p-20">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">

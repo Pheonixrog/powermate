@@ -14,7 +14,7 @@ export function ScrollRevealCard({
   children, 
   index = 0, 
   className = "", 
-  backgroundColor = "bg-gray-950" 
+  backgroundColor = "bg-white-950" 
 }: ScrollRevealCardProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [cardTop, setCardTop] = useState(0)

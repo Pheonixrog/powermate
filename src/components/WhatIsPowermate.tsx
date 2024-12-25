@@ -6,7 +6,7 @@ import { VideoPlayer } from '@/components/VideoPlayer'
 
 export function WhatIsPowermate() {
   return (
-    <FullScreenSection id="what " className="bg-gradient-to-b from-gray-900 to-purple-950">
+    <FullScreenSection id="what " >
       <div className="container mx-auto px-4" id='features'>
         <div className="flex items-center space-x-8">
           {/* Left Content Section */}
