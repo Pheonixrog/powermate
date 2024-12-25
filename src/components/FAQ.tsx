@@ -39,9 +39,10 @@ export function FAQ() {
 
   return (
     <div className="w-full h-full  px-4 md:px-8">
-      <ScrollRevealCard index={3} className="p-6 md:p-12 lg:p-20">
+      <ScrollRevealCard  className="p-6 md:p-12 lg:p-20">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
+          <span className="text-purple-400 text-sm font-mono mb-4 block">05 - HOW IT WORKS</span>
             <EnhancedTypography 
               text="Frequently Asked Questions" 
               className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-center"

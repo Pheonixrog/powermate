@@ -16,7 +16,9 @@ export function WhyPowermateWorks() {
   return (
     <FullScreenSection id="why" >
       <div className="container mx-auto px-4">
+        
         <div className="max-w-4xl mx-auto text-center">
+        <span className="text-purple-400 text-sm font-mono mb-4 block">03 - WHY IT WORKS?</span>
           <EnhancedTypography 
             text="Why Powermate Works" 
             className="text-5xl md:text-7xl font-bold mb-6"

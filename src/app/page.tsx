@@ -9,7 +9,6 @@ import { HowPowermateWorks } from "@/components/HowPowermateWorks";
 import { WhyPowermateWorks } from "@/components/WhyPowermateWorks";
 import { UserReviews } from "@/components/UserReviews";
 import { FAQ } from "@/components/FAQ";
-// import { Pricing } from "@/components/Pricing";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { AboutUs } from "@/components/AboutUs";
 import { Download, Apple } from "lucide-react";
@@ -96,7 +95,11 @@ export default function Page() {
                     </button>
                     <button className="flex items-center justify-center gap-2 bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
                       <Apple size={24} />
+                      <a href="https://apps.apple.com/il/app/powermate-control-screen-time/id6535687314">
                       App Store
+                      </a>
+    
+                     
                     </button>
                   </div>
                 </div>
