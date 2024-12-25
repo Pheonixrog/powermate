@@ -9,7 +9,7 @@ import { HowPowermateWorks } from "@/components/HowPowermateWorks";
 import { WhyPowermateWorks } from "@/components/WhyPowermateWorks";
 import { UserReviews } from "@/components/UserReviews";
 import { FAQ } from "@/components/FAQ";
-import { Pricing } from "@/components/Pricing";
+// import { Pricing } from "@/components/Pricing";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { AboutUs } from "@/components/AboutUs";
 import { Download, Apple } from "lucide-react";
@@ -113,7 +113,7 @@ export default function Page() {
         <WhyPowermateWorks />
         <UserReviews />
         <FAQ />
-        <Pricing />
+        {/* <Pricing /> */}
         <NewsletterSignup />
         <AboutUs />
       </main>

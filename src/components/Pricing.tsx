@@ -1,4 +1,5 @@
 'use client'
+
 import { ScrollReveal } from './ScrollReveal'
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card"
@@ -35,30 +36,35 @@ const plans = [
 export function Pricing() {
   return (
     <ScrollReveal>
-      <section className="py-16 bg-gray-900" id='pricing'>
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-10 text-center text-purple-400">Pricing Plans</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <section className="w-full h-full bg-gradient-to-b from-gray-900 to-purple-950 flex items-center justify-center text-white">
+        <div className="container px-6 md:px-12 lg:px-24 py-16 ">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-purple-400 mb-12">
+            Pricing Plans
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto max-w-6xl">
             {plans.map((plan, index) => (
-              <Card key={index} className="bg-gray-800 text-white border-purple-500">
-                <CardHeader>
-                  <h3 className="text-2xl font-bold text-center">{plan.name}</h3>
+              <Card key={index} className="bg-gray-800 shadow-lg border border-purple-500 rounded-lg transform transition-all duration-300 hover:scale-105">
+                <CardHeader className="p-6 text-center">
+                  <h3 className="text-2xl font-semibold">{plan.name}</h3>
                 </CardHeader>
-                <CardContent>
-                  <div className="text-4xl font-bold text-center mb-6">
-                    {plan.price}<span className="text-lg font-normal">{plan.period}</span>
+                <CardContent className="p-6">
+                  <div className="text-5xl font-bold text-center mb-6">
+                    {plan.price}
+                    <span className="text-lg font-normal">{plan.period}</span>
                   </div>
-                  <ul className="space-y-2">
+                  <ul className="space-y-3">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
-                        <Check className="h-5 w-5 text-green-500 mr-2" />
-                        <span>{feature}</span>
+                        <Check className="h-6 w-6 text-green-500 mr-3" />
+                        <span className="text-sm md:text-base">{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </CardContent>
-                <CardFooter>
-                  <Button className="w-full bg-purple-500 hover:bg-purple-600">{plan.cta}</Button>
+                <CardFooter className="p-6">
+                  <Button className="w-full bg-purple-600 hover:bg-purple-700 text-lg font-medium">
+                    {plan.cta}
+                  </Button>
                 </CardFooter>
               </Card>
             ))}
@@ -68,4 +74,3 @@ export function Pricing() {
     </ScrollReveal>
   )
 }
-

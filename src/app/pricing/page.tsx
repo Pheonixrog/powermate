@@ -9,9 +9,9 @@ export default function PricingPage() {
   const [isYearly, setIsYearly] = useState(false)
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-900 text-white">
+    <div className="flex flex-col min-h-screen bg-gray-900 text-white py-20">
       <Navbar />
-      <main className="flex-grow container mx-auto px-4 py-8">
+      <main className="flex-grow container mx-auto px-4 py-10">
         <h1 className="text-3xl font-bold text-center mb-8">Pricing</h1>
         <p className="text-center mb-12">Choose the plan that fits your needs and take control of your screen time</p>
         
