@@ -38,7 +38,7 @@ export function WhyPowermateWorks() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="bg-gray-900/50 backdrop-blur-sm border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
+              <Card className="bg-gray-950 backdrop-blur-sm border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
                 <CardHeader>
                   <CardTitle className="flex items-center text-2xl">
                     <div className="p-3 rounded-xl bg-purple-500/10 mr-4">

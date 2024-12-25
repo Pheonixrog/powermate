@@ -99,8 +99,8 @@ export function Navbar() {
       <nav className={`
         transition-all duration-500 rounded-full
         ${isScrolled
-          ? 'bg-gray-900/95 backdrop-blur-md shadow-lg shadow-purple-500/10'
-          : 'bg-gray-900/50 backdrop-blur-sm'
+          ? 'bg-gradient-to-b from-gray-950 to-gray-900 backdrop-blur-md shadow-lg shadow-purple-500/10'
+          : 'bg-gradient-to-b from-gray-950 to-gray-950 backdrop-blur-sm'
         }
         border border-purple-500/20 hover:border-purple-500/30 
       `}>

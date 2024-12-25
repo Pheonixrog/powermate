@@ -11,20 +11,20 @@ export default function PricingPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-950 via-teal-950 to-gray-950 text-white py-20">
       <Navbar />
-      <main className="flex-grow container mx-auto px-4 py-10">
+      <main className="flex-grow container mx-auto px-4 py-10 ">
         <h1 className="text-3xl font-bold text-center mb-8">Pricing</h1>
         <p className="text-center mb-12">Choose the plan that fits your needs and take control of your screen time</p>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Free Plan */}
-          <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+          <div className="bg-gray-950 h-full rounded-lg shadow-lg overflow-hidden">
             <div className="px-6 py-8">
               <h2 className="text-2xl font-bold text-center mb-4">Free Plan</h2>
               <p className="text-center text-gray-400 mb-6">Enjoy Essential Tools For Managing Your App Usage At No Cost</p>
               <div className="text-4xl font-bold text-center mb-6">$0<span className="text-lg font-normal">/month</span></div>
               <Button className="w-full">Get Started</Button>
             </div>
-            <div className="px-6 py-8 bg-gray-700">
+            <div className="px-6 py-8 bg-gray-900">
               <h3 className="font-semibold mb-4">Features</h3>
               <ul className="space-y-4">
                 {[
@@ -41,13 +41,13 @@ export default function PricingPage() {
                 ))}
               </ul>
             </div>
-            <div className="px-6 py-4 bg-gray-600">
+            <div className="px-6 py-4 bg-teal-400">
               <p className="text-center">For iPhone</p>
             </div>
           </div>
 
           {/* Elevate Plan */}
-          <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden border-2 border-purple-500">
+          <div className="bg-gray-950 rounded-lg shadow-lg overflow-hidden border-2 border-purple-500">
             <div className="px-6 py-8">
               <div className="bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">Recommended</div>
               <h2 className="text-2xl font-bold text-center mb-4">Elevate Plan</h2>
@@ -68,7 +68,7 @@ export default function PricingPage() {
               )}
               <Button className="w-full bg-purple-500 hover:bg-purple-600">Start Free Week</Button>
             </div>
-            <div className="px-6 py-8 bg-gray-700">
+            <div className="px-6 py-8 bg-gray-900">
               <h3 className="font-semibold mb-4">Features</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
@@ -85,7 +85,7 @@ export default function PricingPage() {
                 </li>
               </ul>
             </div>
-            <div className="px-6 py-4 bg-gray-600">
+            <div className="px-6 py-4 bg-teal-400">
               <p className="text-center">For iPhone</p>
             </div>
           </div>

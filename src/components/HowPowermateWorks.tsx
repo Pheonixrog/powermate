@@ -52,7 +52,7 @@ export function HowPowermateWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="py-8 flex items-center flex-col bg-gradient-to-b from-teal-600  to-gray-950 backdrop-blur-sm border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 h-full w-full">
+              <Card className="py-8 flex items-center flex-col bg-gradient-to-t from-teal-900  to-gray-950 to-40% backdrop-blur-sm border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 h-full w-full">
                 <img
                   src={step.image}
                   alt={step.title}
