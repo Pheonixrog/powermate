@@ -28,7 +28,7 @@ export function VideoPlayer() {
           muted
           playsInline
         >
-          <source src="/vids.mp4" type="video/mp4" />
+          <source src="/vids.MOV" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

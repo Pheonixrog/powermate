@@ -3,14 +3,15 @@ import { FullScreenSection } from './FullScreenSection'
 import { EnhancedTypography } from './EnhancedTypography'
 import { motion } from 'framer-motion'
 import { VideoPlayer } from '@/components/VideoPlayer'
+import Image from 'next/image'
 
 export function WhatIsPowermate() {
   return (
     <FullScreenSection id="what " >
       <div className="container mx-auto px-4" id='features'>
-        <div className="flex items-center space-x-8">
+        <div className="flex space-x-8">
           {/* Left Content Section */}
-          <div className="flex-1 text-left">
+          <div className="flex-1 text-left md:mt-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -29,6 +30,10 @@ export function WhatIsPowermate() {
                 </p>
               </div>
             </motion.div>
+
+            <Image className="mt-8 " src="/Video mascots/Video mascots/GIF/4-HighFive.gif" alt="Device Frame" width={720} height={730}/>
+
+  
           </div>
 
           {/* Right Video Section */}

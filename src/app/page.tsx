@@ -26,7 +26,7 @@ export default function Page() {
       <Navbar />
       <main className="flex-grow ">
         <ScrollReveal>
-          <section className="py-12 md:py-20  ">
+          <section className="  ">
             <div className="container mx-auto px-4">
               <div className="flex flex-col items-center justify-center mb-8 md:mb-12">
                 <h1 className=" text-[150px] md:text-[150px] lg:text-[180px] font-bold text-center overflow-hidden relative flex flex-wrap items-center justify-center gap-2 md:gap-4">

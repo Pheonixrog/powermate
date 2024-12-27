@@ -14,7 +14,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Powermate - Take Control of Your Screen Time',
   description: 'Manage your app usage and boost productivity with Powermate',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
+
+
 
 export default function RootLayout({
   children,
