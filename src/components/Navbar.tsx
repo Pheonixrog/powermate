@@ -13,7 +13,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { motion } from 'framer-motion'
-import QRCode from "react-qr-code";
+import Image from 'next/image'
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -173,20 +173,16 @@ export function Navbar() {
                   <motion.div
                     initial={{ scale: 0.9, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
-                    className="flex justify-center p-4 bg-white rounded-lg"
+                    className="flex justify-center p-4 bg-gray-950 rounded-lg"
                   >
-                    <QRCode
-                      size={500}
-                      style={{
-                        height: "auto",
-                        maxWidth: "100%",
-                        width: "100%",
-                        background: "white",
-                      }}
-                      value={
-                        "https://play.google.com/store/apps/details?id=com.appspot.powermateapp"
-                      }
-                      viewBox={`0 0 256 256`}
+                    <Image
+                      src="/qrcode.png"
+                      alt="QR Code"
+                      width={300}
+                      height={300}
+                      
+                      
+                    
                     />
                   </motion.div>
                 </DialogContent>
