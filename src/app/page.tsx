@@ -29,7 +29,7 @@ export default function Page() {
           <section className="py-12 md:py-20  ">
             <div className="container mx-auto px-4">
               <div className="flex flex-col items-center justify-center mb-8 md:mb-12">
-                <h1 className="text-[150px] md:text-[150px] lg:text-[180px] font-bold text-center overflow-hidden relative flex flex-wrap items-center justify-center gap-2 md:gap-4">
+                <h1 className=" text-[150px] md:text-[150px] lg:text-[180px] font-bold text-center overflow-hidden relative flex flex-wrap items-center justify-center gap-2 md:gap-4">
                   <span className="relative z-10 leading-none">
                     {"P".split("").map((char, index) => (
                       <span
@@ -72,22 +72,22 @@ export default function Page() {
                   </span>
                 </h1>
               </div>
-              <div className="grid mx-20 lg:grid-cols-2 gap-8 lg:gap-12 items-center justify-center">
-                <div className="text-center lg:text-left">
+              <div className="grid md:mx-40 grid-rows-[2fr,1fr] lg:grid-cols-2 gap-8 lg:gap-16 items-center justify-center">
+                <div className=" text-center  lg:text-left">
                   <EnhancedTypography
                     text="Control Your Screen Time With Friends"
-                    className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6"
+                    className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6  "
                     gradient={true}
                   />
                   <EnhancedTypography
                     text="Stay focused and connected — because doom scrolling at 2 AM isn't the vibe."
-                    className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-gray-300"
+                    className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-gray-300 "
                   />
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+                    <button className=" bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
                       Get Started
                     </button>
-                    <button className="flex items-center justify-center gap-2 bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+                    <button className="flex items-center justify-center gap-2 bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 md:py-4  rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
                       <Download size={24} />
                       <a href="https://play.google.com/store/apps/details?id=com.appspot.powermateapp">
                         Play Store
@@ -103,8 +103,8 @@ export default function Page() {
                     </button>
                   </div>
                 </div>
-                <div className=" mx-auto">
-                  <img src="/anime1.svg" alt="" />
+                <div className=" mx-auto w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]">
+                  <img src="/Video mascots/Video mascots/GIF/7-download-animation.gif" alt="" />
                 </div>
               </div>
             </div>
