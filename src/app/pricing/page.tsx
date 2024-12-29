@@ -1,7 +1,7 @@
 "use client"
 import { Navbar } from '@/components/Navbar'
 import { Button } from '@/components/ui/button'
-import { Check, Link } from 'lucide-react'
+import { Check} from 'lucide-react'
 import { Switch } from "@/components/ui/switch"
 import { useState } from 'react'
 
