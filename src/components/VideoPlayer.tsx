@@ -12,18 +12,18 @@ export function VideoPlayer() {
   }, [])
 
   return (
-    <div className="flex justify-center items-center w-full h-full">
-      <div className="relative w-[360px] h-[730px]"> {/* Outer container dimensions */}
-        {/* Image larger by 2px */}
+    <div className="flex justify-center items-center w-full h-full p-4">
+      <div className="relative w-full max-w-[360px] aspect-[9/18]"> {/* Maintain aspect ratio */}
+        {/* Image overlay */}
         <img 
           src="/mac.svg" 
           alt="Device Frame" 
-          className="absolute inset-0 w-[calc(100%)] h-[calc(100%)] z-20 object-cover -top-1 -left-1" 
+          className="absolute inset-0 w-full h-full z-20 object-contain"
         />
-        {/* Video lies perfectly inside the image */}
+        {/* Video */}
         <video
           ref={videoRef}
-          className="absolute left-1 top-2 inset-0 object-cover w-[calc(100%-25px)] h-[calc(100%-20px)] z-10 rounded-3xl"
+          className="absolute inset-0 object-cover w-[calc(100%-25px)] h-[calc(100%-25px)] top-[14px] left-[10px] md:top-[14px] md:left-[10px] z-10 rounded-[22px]"
           loop
           muted
           playsInline
@@ -35,3 +35,4 @@ export function VideoPlayer() {
     </div>
   )
 }
+

@@ -13,7 +13,7 @@ export function AboutUs() {
     { icon: Music2, link: "https://www.tiktok.com/@powermate.app?_t=8qqcduVOaRX&_r=1" },
   ];
   return (
-    <ScrollRevealCard className="p-6 sm:p-12 md:p-20">
+    <ScrollRevealCard className=" md:p-20">
       <div className="container h-auto min-h-screen w-full mx-auto flex flex-col justify-center items-center px-4 sm:px-8 md:px-12">
         <div className="max-w-4xl w-full">
           <span className="text-purple-400 text-sm font-mono mb-4 block">07 - About US</span>
