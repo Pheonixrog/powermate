@@ -21,25 +21,25 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  const navSections = [{ id: "features", label: "Features", offset: 100 }];
+  // const navSections = [{ id: "features", label: "Features", offset: 100 }];
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       setIsScrolled(scrollY > 20);
 
-      const scrollPosition = scrollY + 100;
-      navSections.forEach(({ id }) => {
-        const element = document.getElementById(id);
-        if (element) {
-          const elementTop = element.offsetTop;
-          const elementBottom = elementTop + element.offsetHeight;
+      // const scrollPosition = scrollY + 100;
+      // navSections.forEach(({ id }) => {
+      //   const element = document.getElementById(id);
+      //   if (element) {
+      //     const elementTop = element.offsetTop;
+      //     const elementBottom = elementTop + element.offsetHeight;
 
-          if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
-            setActiveSection(id);
-          }
-        }
-      });
+      //     if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
+      //       setActiveSection(id);
+      //     }
+      //   }
+      // });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -94,7 +94,7 @@ export function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-end justify-end space-x-2 flex-grow">
-            {navSections.map(({ id, label }) => (
+            {/* {navSections.map(({ id, label }) => (
               <motion.button
                 key={id}
                 whileHover={{ scale: 1.05 }}
@@ -111,7 +111,7 @@ export function Navbar() {
               >
                 {label}
               </motion.button>
-            ))}
+            ))} */}
             <Link href="/pricing">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -188,7 +188,7 @@ export function Navbar() {
               className="md:hidden absolute left-2 right-2 mt-2 p-3 bg-gray-900 border border-purple-500/20 rounded-2xl shadow-lg"
             >
               <div className="flex flex-col space-y-1">
-                {navSections.map(({ id, label }) => (
+                {/* {navSections.map(({ id, label }) => (
                   <motion.button
                     key={id}
                     whileTap={{ scale: 0.98 }}
@@ -204,7 +204,7 @@ export function Navbar() {
                   >
                     {label}
                   </motion.button>
-                ))}
+                ))} */}
 
                 <Link href="/pricing" className="block" key="pricing">
                   <motion.button
