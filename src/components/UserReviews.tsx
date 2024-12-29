@@ -49,6 +49,17 @@ const reviews = [
 export function UserReviews() {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    // Check if mobile on mount and on resize
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   useEffect(() => {
     const scrollContainer = scrollRef.current
@@ -65,23 +76,35 @@ export function UserReviews() {
 
     const scroll = () => {
       if (isVisible && scrollContainer) {
-        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
-          scrollContainer.scrollLeft = 0
+        const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth
+        
+        if (scrollContainer.scrollLeft >= maxScroll) {
+          // Smooth reset to start
+          scrollContainer.scrollTo({
+            left: 0,
+            behavior: 'smooth'
+          })
         } else {
-          scrollContainer.scrollLeft += 2 // Reduced speed for smoother scrolling
+          // Smooth scroll
+          scrollContainer.scrollTo({
+            left: scrollContainer.scrollLeft + 1,
+            behavior: 'auto'
+          })
         }
       }
     }
 
-    const intervalId = setInterval(scroll, 30) // Increased frequency for smoother motion
+    // Adjust interval based on device type
+    const intervalId = setInterval(scroll, isMobile ? 50 : 30)
+    
     return () => {
       clearInterval(intervalId)
       observer.disconnect()
     }
-  }, [isVisible])
+  }, [isVisible, isMobile])
 
   const cardVariants = {
-    hidden: { opacity: 0, x: 50 },
+    hidden: { opacity: 0, x: 20 },
     visible: (index: number) => ({
       opacity: 1,
       x: 0,
@@ -94,64 +117,72 @@ export function UserReviews() {
   }
 
   return (
-    <FullScreenSection id="reviews">
-      <div className="container mx-auto px-4 py-8 md:py-16">
-        <div className="max-w-4xl mx-auto text-center px-4">
+   
+      <div className="container mx-auto px-2  py-6  md:py-16">
+        <div className="max-w-4xl mx-auto text-center px-2 sm:px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="text-purple-400 text-sm font-mono mb-3 md:mb-4 block">04 - USER REVIEWS</span>
+            <span className="text-purple-400 text-xs sm:text-sm font-mono mb-2 sm:mb-3 md:mb-4 block">04 - USER REVIEWS</span>
             <EnhancedTypography 
               text="User Reviews" 
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-4 md:mb-6"
               gradient={true}
             />
             <EnhancedTypography 
               text="See what others are saying." 
-              className="text-lg sm:text-xl md:text-2xl mb-8 md:mb-12 text-gray-300"
+              className="text-base sm:text-lg md:text-2xl mb-6 sm:mb-8 md:mb-12 text-gray-300"
             />
           </motion.div>
         </div>
 
-        <motion.div
-          ref={scrollRef}
-          className="flex overflow-x-hidden gap-4 sm:gap-6 md:gap-8 pb-4 md:pb-8 max-w-[calc(100vw-2rem)] sm:max-w-[calc(100vw-4rem)] md:max-w-6xl mx-auto"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, margin: "-100px" }}
+        <div 
+          className="relative w-full overflow-hidden"
+          style={{
+            maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)'
+          }}
         >
-          {reviews.concat(reviews).map((review, index) => (
-            <motion.div
-              key={index}
-              className="flex-none w-[280px] sm:w-[320px] md:w-96"
-              variants={cardVariants}
-              custom={index}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Card className="bg-gray-900/50 backdrop-blur-sm border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 h-auto sm:h-64">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-3 sm:gap-4 md:gap-6">
-                    <Avatar className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 ring-2 sm:ring-4 ring-purple-500/30">
-                      <AvatarImage src={review.avatar} alt={review.name} />
-                      <AvatarFallback>{review.name.charAt(0)}</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <div className="text-lg sm:text-xl font-semibold text-white">{review.name}</div>
-                      <div className="text-xs sm:text-sm text-purple-300/70">{review.username}</div>
-                    </div>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-base sm:text-lg text-gray-300 italic line-clamp-3">&ldquo;{review.content}&rdquo;</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
+          <motion.div
+            ref={scrollRef}
+            className="flex gap-3 sm:gap-4 md:gap-8 pb-4 md:pb-8 overflow-x-hidden"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, margin: "-100px" }}
+          >
+            {reviews.concat(reviews).map((review, index) => (
+              <motion.div
+                key={index}
+                className="flex-none w-[260px] sm:w-[320px] md:w-96"
+                variants={cardVariants}
+                custom={index}
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Card className="bg-gray-900/50 backdrop-blur-sm border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 h-full">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2 sm:gap-4">
+                      <Avatar className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 ring-2 sm:ring-4 ring-purple-500/30">
+                        <AvatarImage src={review.avatar} alt={review.name} />
+                        <AvatarFallback>{review.name.charAt(0)}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <div className="text-base sm:text-lg md:text-xl font-semibold text-white">{review.name}</div>
+                        <div className="text-xs sm:text-sm text-purple-300/70">{review.username}</div>
+                      </div>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm sm:text-base md:text-lg text-gray-300 italic line-clamp-3">&ldquo;{review.content}&rdquo;</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
-    </FullScreenSection>
+   
   )
 }
