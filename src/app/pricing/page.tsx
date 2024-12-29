@@ -1,9 +1,10 @@
 "use client"
 import { Navbar } from '@/components/Navbar'
 import { Button } from '@/components/ui/button'
-import { Check } from 'lucide-react'
+import { Check, Link } from 'lucide-react'
 import { Switch } from "@/components/ui/switch"
 import { useState } from 'react'
+
 
 export default function PricingPage() {
   const [isYearly, setIsYearly] = useState(false)
@@ -22,8 +23,12 @@ export default function PricingPage() {
               <h2 className="text-2xl font-bold text-center mb-4">Free Plan</h2>
               <p className="text-center text-gray-400 mb-6">Enjoy Essential Tools For Managing Your App Usage At No Cost</p>
               <div className="text-4xl font-bold text-center mb-6">$0<span className="text-lg font-normal">/month</span></div>
+              <a href="/"> <Button className="w-full">
+                Get Started
+                </Button></a>
+             
               
-              <Button className="w-full">Get Started</Button>
+              
             </div>
             <div className="px-6 py-8 bg-gray-900">
               <h3 className="font-semibold mb-4">Features</h3>
@@ -67,7 +72,7 @@ export default function PricingPage() {
               ) : (
                 <div className="text-4xl font-bold text-center mb-6">$2.99<span className="text-lg font-normal">/month</span></div>
               )}
-              <Button className="w-full bg-purple-500 hover:bg-purple-600">Start Free Week</Button>
+              <a href="/"><Button className="w-full bg-purple-500 hover:bg-purple-600">Start Free Week</Button></a>
             </div>
             <div className="px-6 py-8 bg-gray-900">
               <h3 className="font-semibold mb-4">Features</h3>
