@@ -2,7 +2,7 @@
 import { ScrollRevealCard } from './ScrollRevealCard'
 import { EnhancedTypography } from './EnhancedTypography'
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Linkedin, Twitter, Instagram, Music2 } from 'lucide-react'
+import { Mail, Linkedin, Twitter, Instagram, Music2 , Facebook} from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export function AboutUs() {
@@ -11,6 +11,7 @@ export function AboutUs() {
     { icon: Twitter, link: "https://x.com/Powermate_app?t=NZVIk-lx4cIzgE7-11ZKmg&s=09" },
     { icon: Instagram, link: "https://www.instagram.com/powermate.app/profilecard/?igsh=MWdua2lpYXhrMnFjbA==" },
     { icon: Music2, link: "https://www.tiktok.com/@powermate.app?_t=8qqcduVOaRX&_r=1" },
+    { icon: Facebook, link: "https://www.facebook.com/people/Powermate/61571084783333/" },
   ];
   return (
     <ScrollRevealCard className=" md:p-20">
