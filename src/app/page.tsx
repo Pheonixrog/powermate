@@ -26,10 +26,10 @@ export default function Page() {
       <Navbar />
       <main className="flex-grow ">
         <ScrollReveal>
-          <section className="  ">
+          <section className="sm:pt-0 ">
             <div className="container mx-auto px-4">
-              <div className="flex flex-col items-center justify-center md:mb-8 md:mb-12">
-                <h1 className=" md:mt-0 md:pt-0 sm:pt-40  text-[50px] md:text-[150px] lg:text-[180px] font-bold text-center overflow-hidden relative flex flex-wrap items-center justify-center gap-2 md:gap-4">
+              <div className="flex flex-col items-center justify-center mt-10 ">
+                <h1 className=" md:mt-0 md:pt-0   text-[50px] md:text-[150px] lg:text-[180px] font-bold text-center overflow-hidden relative flex flex-wrap items-center justify-center gap-2 md:gap-4">
                   <span className="relative z-10 leading-none">
                     {"P".split("").map((char, index) => (
                       <span
@@ -72,7 +72,7 @@ export default function Page() {
                   </span>
                 </h1>
               </div>
-              <div className="grid md:mx-40  my-0 grid-rows-[2fr,1fr] lg:grid-cols-2 gap-5 lg:gap-16 items-center justify-center">
+              <div className="sm:pt-0 sm:px-0 px-5 pt-10 grid md:mx-40  md:grid-rows-[2fr,1fr] lg:grid-cols-2 gap-5 lg:gap-16 items-center justify-center">
                 <div className=" text-center  lg:text-left ">
                   <EnhancedTypography
                     text="Control Your Screen Time With Friends"
@@ -83,7 +83,7 @@ export default function Page() {
                     text="Stay focused and connected — because doom scrolling at 2 AM isn't the vibe."
                     className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-gray-300 "
                   />
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <div className="sm:pt-0 pt-5 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     
                     <button className="flex items-center justify-center gap-2 bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 md:py-4  rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
                       <Download size={24} />
@@ -101,8 +101,8 @@ export default function Page() {
                     </button>
                   </div>
                 </div>
-                <div className=" mx-auto w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]">
-                  <img src="/Video mascots/Video mascots/GIF/7-download-animation.gif" alt="" />
+                <div className="sm:pt-0  sm:px-0  pt-20 mx-auto w-[300px] h-[300px] lg:w-[400px] lg:h-[400px]">
+                  <img src="/Video mascots/Video mascots/GIF/7-download-animation.gif" alt=""  />
                 </div>
               </div>
             </div>
