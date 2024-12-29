@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export function NewsletterSignup() {
   return (
-    <section className="py-12 min-h-screen flex items-center justify-center bg-gray-900">
+    <section className="py-12 min-h-screen flex items-center justify-center">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
