@@ -29,7 +29,7 @@ export default function Page() {
           <section className="  ">
             <div className="container mx-auto px-4">
               <div className="flex flex-col items-center justify-center md:mb-8 md:mb-12">
-                <h1 className="  text-[50px] md:text-[150px] lg:text-[180px] font-bold text-center overflow-hidden relative flex flex-wrap items-center justify-center gap-2 md:gap-4">
+                <h1 className=" md:mt-0 md:pt-0 sm:pt-40  text-[50px] md:text-[150px] lg:text-[180px] font-bold text-center overflow-hidden relative flex flex-wrap items-center justify-center gap-2 md:gap-4">
                   <span className="relative z-10 leading-none">
                     {"P".split("").map((char, index) => (
                       <span
@@ -72,8 +72,8 @@ export default function Page() {
                   </span>
                 </h1>
               </div>
-              <div className="grid md:mx-40 grid-rows-[2fr,1fr] lg:grid-cols-2 gap-8 lg:gap-16 items-center justify-center">
-                <div className=" text-center  lg:text-left">
+              <div className="grid md:mx-40  my-0 grid-rows-[2fr,1fr] lg:grid-cols-2 gap-5 lg:gap-16 items-center justify-center">
+                <div className=" text-center  lg:text-left ">
                   <EnhancedTypography
                     text="Control Your Screen Time With Friends"
                     className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6  "

@@ -15,7 +15,7 @@ const reasons = [
 export function WhyPowermateWorks() {
   return (
     <FullScreenSection id="why" >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:mx-10">
         
         <div className="max-w-4xl mx-auto text-center">
         <span className="text-purple-400 text-sm font-mono mb-4 block">03 - WHY IT WORKS?</span>

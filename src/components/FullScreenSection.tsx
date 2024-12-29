@@ -33,7 +33,7 @@ export function FullScreenSection({ children, className = "", id }: FullScreenSe
       className={`min-h-screen flex items-center justify-center relative ${className}`}
     >
       {isMobile ? (
-        <div className="w-full">{children}</div>
+        <div className="w-full my-20">{children}</div>
       ) : (
         <motion.div
           className="w-full"
