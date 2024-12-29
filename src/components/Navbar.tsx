@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -19,30 +20,13 @@ export function Navbar() {
   const [isDownloadOpen, setIsDownloadOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-  const [navPosition, setNavPosition] = useState(24);
 
   const navSections = [{ id: "features", label: "Features", offset: 100 }];
-
-  const INITIAL_POSITION = 24;
-  const FLOAT_POSITION = 80;
-  const STOP_POSITION = 800;
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       setIsScrolled(scrollY > 20);
-
-      if (scrollY <= FLOAT_POSITION) {
-        setNavPosition(INITIAL_POSITION);
-      } else if (scrollY <= STOP_POSITION) {
-        setNavPosition(FLOAT_POSITION);
-      } else {
-        const pushUpAmount = Math.min(
-          FLOAT_POSITION,
-          FLOAT_POSITION - (scrollY - STOP_POSITION)
-        );
-        setNavPosition(Math.max(0, pushUpAmount));
-      }
 
       const scrollPosition = scrollY + 100;
       navSections.forEach(({ id }) => {
@@ -65,217 +49,210 @@ export function Navbar() {
   const scrollToSection = (sectionId: string): void => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const navHeight = 200;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+      const navHeight = 80; // Adjust this value based on your navbar height
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.scrollBy(0, -navHeight); // Adjust for navbar height
       setIsMobileMenuOpen(false);
     }
   };
 
-return (
-<motion.div
-  className="w-full flex justify-center px-4 py-4 sm:px-6 lg:px-8"
-  initial={{ y: -100, opacity: 0 }}
-  animate={{ y: 0, opacity: 1 }}
-  transition={{ duration: 0.6, ease: "easeOut" }}
-  style={{ position: 'fixed', top: 0, zIndex: 50 }}
- >
-  <nav
-    className={`
-      transition-all duration-500 rounded-full w-full max-w-7xl
-      ${
-        isScrolled
-          ? "bg-gradient-to-b from-gray-950 to-gray-900 backdrop-blur-md shadow-lg shadow-purple-500/10"
-          : "bg-gradient-to-b from-gray-950 to-gray-950 backdrop-blur-sm"
-      }
-      border border-purple-500/20 hover:border-purple-500/30
-    `}
-   >
-    <div className="px-4 sm:px-6 py-2 sm:py-3 flex items-center justify-between">
-      <motion.div
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.2 }}
-        className="flex-shrink-0 w-1/3 sm:w-auto"
+  return (
+    <motion.div
+      className="w-full flex justify-center px-4 py-4 sm:px-6 lg:px-8"
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      style={{ position: 'fixed', top: 0, zIndex: 50 }}
+    >
+      <nav
+        className={`
+          transition-all duration-500 rounded-full w-full max-w-7xl
+          ${
+            isScrolled
+              ? "bg-gradient-to-b from-gray-950 to-gray-900 backdrop-blur-md shadow-lg shadow-purple-500/10"
+              : "bg-gradient-to-b from-gray-950 to-gray-950 backdrop-blur-sm"
+          }
+          border border-purple-500/20 hover:border-purple-500/30
+        `}
       >
-        <Link href="/" className="flex items-center group">
-          <img
-            src="/logo.svg"
-            alt="Powermate Logo"
-            width={140}
-            height={28}
-            className="group-hover:rotate-12 transition-transform duration-300 md:w-[220px] lg:w-[250px]"
-          />
-        </Link>
-      </motion.div>
+        <div className="px-4 sm:px-6 py-2 sm:py-3 flex items-center justify-between">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.2 }}
+            className="flex-shrink-0 w-1/3 sm:w-auto"
+          >
+            <Link href="/" className="flex items-center group">
+              <Image
+                src="/logo.svg"
+                alt="Powermate Logo"
+                width={140}
+                height={28}
+                className="group-hover:rotate-12 transition-transform duration-300 md:w-[220px] lg:w-[250px]"
+              />
+            </Link>
+          </motion.div>
 
-        {/* Desktop Menu */}
-      <div className="hidden md:flex items-center justify-center space-x-2 flex-grow">
-          {navSections.map(({ id, label }) => (
-            <motion.button
-              key={id}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => scrollToSection(id)}
-              className={`
-                px-4 py-2 text-lg lg:text-xl rounded-full transition-all duration-300
-                ${
-                  activeSection === id
-                    ? "text-white bg-purple-500/20"
-                    : "text-gray-300 hover:text-white hover:bg-purple-500/10"
-                }
-              `}
-            >
-              {label}
-            </motion.button>
-          ))}
-          <Link href="/pricing">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className={`
-                px-4 py-2 text-lg lg:text-xl rounded-full transition-all duration-300
-                text-gray-300 hover:text-white hover:bg-purple-500/10
-              `}
-            >
-              Pricing
-            </motion.button>
-          </Link>
-          <Dialog open={isDownloadOpen} onOpenChange={setIsDownloadOpen}>
-            <DialogTrigger asChild>
-              <motion.div
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-end justify-end space-x-2 flex-grow">
+            {navSections.map(({ id, label }) => (
+              <motion.button
+                key={id}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => scrollToSection(id)}
+                className={`
+                  px-4 py-2 text-lg lg:text-xl rounded-full transition-all duration-300
+                  ${
+                    activeSection === id
+                      ? "text-white bg-purple-500/20"
+                      : "text-gray-300 hover:text-white hover:bg-purple-500/10"
+                  }
+                `}
               >
-                <Button
-                  variant="ghost"
-                  className="text-gray-300 hover:text-white hover:bg-purple-500/10 text-lg lg:text-xl rounded-full"
+                {label}
+              </motion.button>
+            ))}
+            <Link href="/pricing">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className={`
+                  px-4 py-2 text-lg lg:text-xl rounded-full transition-all duration-300
+                  text-gray-300 hover:text-white hover:bg-purple-500/10
+                `}
+              >
+                Pricing
+              </motion.button>
+            </Link>
+            <Dialog open={isDownloadOpen} onOpenChange={setIsDownloadOpen}>
+              <DialogTrigger asChild>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <Download className="mr-2 h-4 w-4" /> Download
-                </Button>
-              </motion.div>
-            </DialogTrigger>
-            <DialogContent className="bg-gray-900/95 backdrop-blur-md border-purple-500/20">
-              <DialogHeader>
-                <DialogTitle className="text-white">
-                  Download Powermate
-                </DialogTitle>
-                <DialogDescription className="text-gray-400">
-                  Scan the QR code with your phone
-                </DialogDescription>
-              </DialogHeader>
-              <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                className="flex justify-center p-4 bg-gray-950 rounded-lg"
-              >
-                <Image
-                  src="/qrcode.png"
-                  alt="QR Code"
-                  width={300}
-                  height={300}
-                />
-              </motion.div>
-            </DialogContent>
-          </Dialog>
+                  <Button
+                    variant="ghost"
+                    className="text-gray-300 hover:text-white hover:bg-purple-500/10 text-lg lg:text-xl rounded-full"
+                  >
+                    <Download className="mr-2 h-4 w-4" /> Download
+                  </Button>
+                </motion.div>
+              </DialogTrigger>
+              <DialogContent className="bg-gray-900/95 backdrop-blur-md border-purple-500/20">
+                <DialogHeader>
+                  <DialogTitle className="text-white">
+                    Download Powermate
+                  </DialogTitle>
+                  <DialogDescription className="text-gray-400">
+                    Scan the QR code with your phone
+                  </DialogDescription>
+                </DialogHeader>
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  className="flex justify-center p-4 bg-gray-950 rounded-lg"
+                >
+                  <Image
+                    src="/qrcode.png"
+                    alt="QR Code"
+                    width={300}
+                    height={300}
+                  />
+                </motion.div>
+              </DialogContent>
+            </Dialog>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-1.5 rounded-full hover:bg-purple-500/10 ml-auto"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-5 w-5 text-gray-300" />
+            ) : (
+              <Menu className="h-5 w-5 text-gray-300" />
+            )}
+          </button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-1.5 rounded-full hover:bg-purple-500/10 ml-auto"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? (
-            <X className="h-5 w-5 text-gray-300 " />
-          ) : (
-            <Menu className="h-5 w-5 text-gray-300 " />
+        {/* Mobile Menu Dropdown */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2 }}
+              className="md:hidden absolute left-2 right-2 mt-2 p-3 bg-gray-900 border border-purple-500/20 rounded-2xl shadow-lg"
+            >
+              <div className="flex flex-col space-y-1">
+                {navSections.map(({ id, label }) => (
+                  <motion.button
+                    key={id}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => scrollToSection(id)}
+                    className={`
+                      w-full px-4 py-2.5 text-base font-medium rounded-xl transition-all duration-300
+                      ${
+                        activeSection === id
+                          ? "text-white bg-purple-500/20"
+                          : "text-gray-300 hover:text-white hover:bg-purple-500/10"
+                      }
+                    `}
+                  >
+                    {label}
+                  </motion.button>
+                ))}
+
+                <Link href="/pricing" className="block" key="pricing">
+                  <motion.button
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full px-4 py-2.5 text-base font-medium rounded-xl transition-all duration-300 text-gray-300 hover:text-white hover:bg-purple-500/10"
+                  >
+                    Pricing
+                  </motion.button>
+                </Link>
+
+                <Dialog open={isDownloadOpen} onOpenChange={setIsDownloadOpen}>
+                  <DialogTrigger asChild>
+                    <motion.button
+                      whileTap={{ scale: 0.98 }}
+                      className="w-full px-4 py-2.5 text-base font-medium rounded-xl transition-all duration-300 text-gray-300 hover:text-white hover:bg-purple-500/10 flex items-center justify-center"
+                    >
+                      <Download className="mr-2 h-4 w-4" /> Download
+                    </motion.button>
+                  </DialogTrigger>
+                  <DialogContent className="bg-gray-900/95 backdrop-blur-md border-purple-500/20">
+                    <DialogHeader>
+                      <DialogTitle className="text-white">
+                        Download Powermate
+                      </DialogTitle>
+                      <DialogDescription className="text-gray-400">
+                        Scan the QR code with your phone
+                      </DialogDescription>
+                    </DialogHeader>
+                    <motion.div
+                      initial={{ scale: 0.9, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      className="flex justify-center p-4 bg-gray-950 rounded-lg"
+                    >
+                      <Image
+                        src="/qrcode.png"
+                        alt="QR Code"
+                        width={300}
+                        height={300}
+                      />
+                    </motion.div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </motion.div>
           )}
-        </button>
-       </div>
-
-       {/* Mobile Menu Dropdown */}
-       <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden absolute left-2 right-2 mt-2 p-3 bg-gray-900 border border-purple-500/20 rounded-2xl shadow-lg"
-          >
-            <div className="flex flex-col space-y-1">
-                  {navSections.map(({ id, label }) => (
-                    <motion.button
-                      key={id}
-                      whileTap={{ scale: 0.98 }}
-                      onClick={() => scrollToSection(id)}
-                      className={`
-                        w-full px-4 py-2.5 text-base font-medium rounded-xl transition-all duration-300
-                        ${
-                          activeSection === id
-                            ? "text-white bg-purple-500/20"
-                            : "text-gray-300 hover:text-white hover:bg-purple-500/10"
-                        }
-                      `}
-                    >
-                      {label}
-                    </motion.button>
-                  ))}
-
-                  <Link href="/pricing" className="block">
-                    <motion.button
-                      whileTap={{ scale: 0.98 }}
-                      className="w-full px-4 py-2.5 text-base font-medium rounded-xl transition-all duration-300 text-gray-300 hover:text-white hover:bg-purple-500/10"
-                    >
-                      Pricing
-                    </motion.button>
-                  </Link>
-
-                  <Dialog open={isDownloadOpen} onOpenChange={setIsDownloadOpen}>
-                    <DialogTrigger asChild>
-                      <motion.button
-                        whileTap={{ scale: 0.98 }}
-                        className="w-full px-4 py-2.5 text-base font-medium rounded-xl transition-all duration-300 text-gray-300 hover:text-white hover:bg-purple-500/10 flex items-center justify-center"
-                      >
-                        <Download className="mr-2 h-4 w-4" /> Download
-                      </motion.button>
-                    </DialogTrigger>
-                    <DialogContent className="bg-gray-900/95 backdrop-blur-md border-purple-500/20">
-                      <DialogHeader>
-                        <DialogTitle className="text-white">
-                          Download Powermate
-                        </DialogTitle>
-                        <DialogDescription className="text-gray-400">
-                          Scan the QR code with your phone
-                        </DialogDescription>
-                      </DialogHeader>
-                      <motion.div
-                        initial={{ scale: 0.9, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        className="flex justify-center p-4 bg-gray-950 rounded-lg"
-                      >
-                        <Image
-                          src="/qrcode.png"
-                          alt="QR Code"
-                          width={300}
-                          height={300}
-                        />
-                      </motion.div>
-                    </DialogContent>
-                  </Dialog>
-                </div>
-            {/* Add your mobile menu content */}
-          </motion.div>
-        )}
-       </AnimatePresence>
-    
-    
-  </nav>
-</motion.div>
-)
+        </AnimatePresence>
+      </nav>
+    </motion.div>
+  );
 }
 
