@@ -19,42 +19,42 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDownloadOpen, setIsDownloadOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
+  // const [activeSection, setActiveSection] = useState("");
 
   // const navSections = [{ id: "features", label: "Features", offset: 100 }];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setIsScrolled(scrollY > 20);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollY = window.scrollY;
+  //     setIsScrolled(scrollY > 20);
 
-      // const scrollPosition = scrollY + 100;
-      // navSections.forEach(({ id }) => {
-      //   const element = document.getElementById(id);
-      //   if (element) {
-      //     const elementTop = element.offsetTop;
-      //     const elementBottom = elementTop + element.offsetHeight;
+  //     // const scrollPosition = scrollY + 100;
+  //     // navSections.forEach(({ id }) => {
+  //     //   const element = document.getElementById(id);
+  //     //   if (element) {
+  //     //     const elementTop = element.offsetTop;
+  //     //     const elementBottom = elementTop + element.offsetHeight;
 
-      //     if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
-      //       setActiveSection(id);
-      //     }
-      //   }
-      // });
-    };
+  //     //     if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
+  //     //       setActiveSection(id);
+  //     //     }
+  //     //   }
+  //     // });
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
-  const scrollToSection = (sectionId: string): void => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const navHeight = 80; // Adjust this value based on your navbar height
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-      window.scrollBy(0, -navHeight); // Adjust for navbar height
-      setIsMobileMenuOpen(false);
-    }
-  };
+  // const scrollToSection = (sectionId: string): void => {
+  //   const element = document.getElementById(sectionId);
+  //   if (element) {
+  //     const navHeight = 80; // Adjust this value based on your navbar height
+  //     element.scrollIntoView({ behavior: "smooth", block: "start" });
+  //     window.scrollBy(0, -navHeight); // Adjust for navbar height
+  //     setIsMobileMenuOpen(false);
+  //   }
+  // };
 
   return (
     <motion.div
