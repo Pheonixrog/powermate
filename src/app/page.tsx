@@ -84,9 +84,7 @@ export default function Page() {
                     className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-gray-300 "
                   />
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <button className=" bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
-                      Get Started
-                    </button>
+                    
                     <button className="flex items-center justify-center gap-2 bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 md:py-4  rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
                       <Download size={24} />
                       <a href="https://play.google.com/store/apps/details?id=com.appspot.powermateapp">

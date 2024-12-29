@@ -2,10 +2,16 @@
 import { ScrollRevealCard } from './ScrollRevealCard'
 import { EnhancedTypography } from './EnhancedTypography'
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Facebook, Twitter, Instagram, Music2 } from 'lucide-react'
+import { Mail, Linkedin, Twitter, Instagram, Music2 } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export function AboutUs() {
+  const socialMediaLinks = [
+    { icon: Linkedin, link: "https://www.linkedin.com/company/powermateapp/" },
+    { icon: Twitter, link: "https://x.com/Powermate_app?t=NZVIk-lx4cIzgE7-11ZKmg&s=09" },
+    { icon: Instagram, link: "https://www.instagram.com/powermate.app/profilecard/?igsh=MWdua2lpYXhrMnFjbA==" },
+    { icon: Music2, link: "https://www.tiktok.com/@powermate.app?_t=8qqcduVOaRX&_r=1" },
+  ];
   return (
     <ScrollRevealCard className="p-6 sm:p-12 md:p-20">
       <div className="container h-auto min-h-screen w-full mx-auto flex flex-col justify-center items-center px-4 sm:px-8 md:px-12">
@@ -55,14 +61,16 @@ export function AboutUs() {
                 >
                   <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-purple-400">Follow Us</h3>
                   <div className="flex space-x-3 sm:space-x-4">
-                    {[Facebook, Twitter, Instagram, Music2].map((Icon, index) => (
-                      <a
-                        key={index}
-                        href="#"
-                        className="p-3 rounded-xl bg-purple-500/10 text-gray-300 hover:text-purple-400 transition-colors duration-200"
-                      >
-                        <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
-                      </a>
+                  {socialMediaLinks.map(({ icon: Icon, link }, index) => (
+    <a
+      key={index}
+      href={link}
+      target="_blank" // Opens the link in a new tab
+      rel="noopener noreferrer" // Provides security by preventing access to the original window
+      className="p-3 rounded-xl bg-purple-500/10 text-gray-300 hover:text-purple-400 transition-colors duration-200"
+    >
+      <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
+    </a>
                     ))}
                   </div>
                 </motion.div>
