@@ -13,8 +13,8 @@ import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { AboutUs } from "@/components/AboutUs";
 import { Download, Apple } from "lucide-react";
 
-// export default function Page() {
-//   const [isVisible, setIsVisible] = useState(false);
+export default function Page() {
+  // const [isVisible, setIsVisible] = useState(false);
 
   // useEffect(() => {
   //   const timer = setTimeout(() => setIsVisible(true), 500);
