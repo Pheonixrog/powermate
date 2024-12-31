@@ -22,14 +22,14 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-950  via-teal-950 via-30% to-gray-950  ">
+    <div className="flex flex-col min-h-screen bg-[url('/background.svg')]  bg-cover bg-center bg-no-repeat"> 
       <Navbar />
       <main className="flex-grow ">
         <ScrollReveal>
           <section className="sm:pt-0 ">
             <div className="container mx-auto px-4">
               <div className="flex flex-col items-center justify-center mt-10 "></div>
-              <div className="sm:pt-0 sm:px-0 px-5 pt-10 grid md:mx-40   gap-5 lg:gap-16 items-center justify-center">
+              <div className="sm:pt-0 sm:px-0 px-5  grid md:mx-40 md:mt-20  gap-5 lg:gap-16 items-center justify-center">
                 <div className=" text-center  lg:text-left ">
                   <p className="text-5xl md:text-7xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6  text-[#CAFFE5]  ">
                     Control Your Screen Time With Friends
@@ -44,7 +44,7 @@ export default function Page() {
                         text="because doom scrolling at 2 AM isn't the vibe."
                         className="text-lg md:text-2xl lg:text-3xl mb-6 md:mb-8 text-[#29A5D6] mx-3 md:mx-0"
                       />
-                      <div className="sm:pt-0 pt-5 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                      <div className="my-5 sm:pt-0 pt-5 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <button className="flex items-center justify-center gap-2 bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 md:py-4  rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
                           <Download size={24} />
                           <a href="https://play.google.com/store/apps/details?id=com.appspot.powermateapp">
@@ -60,9 +60,9 @@ export default function Page() {
                       </div>
                     </div>
                     <div>
-                      <div className="sm:pt-0  sm:px-0  pt-20 mx-auto w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] md:px-10">
+                      <div className="sm:pt-0 sm:px-0  pt-20 mx-auto w-[300px] h-[300px] lg:w-[600px] lg:h-[400px] md:px-10">
                         <img
-                          src="/Video mascots/Video mascots/GIF/7-download-animation.gif"
+                          src="/Video mascots/Video mascots/GIF/4-Highfive.gif"
                           alt=""
                         />
                       </div>

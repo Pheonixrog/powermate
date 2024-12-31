@@ -43,7 +43,7 @@ export function FAQ() {
       <ScrollRevealCard className="p-6 md:p-12 lg:p-20">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <span className="text-purple-400 text-sm font-mono mb-4 block">05 - HOW IT WORKS</span>
+           
             <EnhancedTypography 
               text="Frequently Asked Questions" 
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-center"
@@ -54,7 +54,7 @@ export function FAQ() {
               className="text-sm sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-12 text-center text-gray-300"
             />
             
-            <div className="space-y-6 sm:flex sm:flex-row sm:items-start sm:space-y-0 sm:space-x-6">
+            <div className="sm:flex sm:flex-row sm:items-start sm:space-y-0 sm:space-x-6">
               <Image 
                 src="/Video mascots/Video mascots/GIF/2-pointing-animation.gif" 
                 width={500} 
@@ -71,7 +71,7 @@ export function FAQ() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <Card className="bg-gray-900/50 backdrop-blur-sm border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
+                    <Card className=" backdrop-blur-sm border-[#29A5D6]/20  hover:border-[#29A5D6]/40  transition-all duration-300">
                       <CardHeader 
                         className="cursor-pointer p-4 md:p-6"
                         onClick={() => setOpenIndex(openIndex === index ? null : index)}

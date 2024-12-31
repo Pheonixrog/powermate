@@ -18,7 +18,7 @@ export function WhyPowermateWorks() {
       <div className="container mx-auto px-4 sm:mx-10">
         
         <div className="max-w-4xl mx-auto text-center">
-        <span className="text-purple-400 text-sm font-mono mb-4 block">03 - WHY IT WORKS?</span>
+     
           <EnhancedTypography 
             text="Why Powermate Works" 
             className="text-5xl md:text-7xl font-bold mb-6"
@@ -38,11 +38,11 @@ export function WhyPowermateWorks() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="bg-gray-950 backdrop-blur-sm border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
+              <Card className="h-full w-full  backdrop-blur-sm border-[#29A5D6]/20 hover:border-[#29A5D6]/40 transition-all duration-300">
                 <CardHeader>
-                  <CardTitle className="flex items-center text-2xl">
-                    <div className="p-3 rounded-xl bg-purple-500/10 mr-4">
-                      <reason.icon className="w-8 h-8 text-purple-400" />
+                  <CardTitle className="flex items-center text-2xl text-[#29A5D6]">
+                    <div className="p-3 rounded-xl  mr-4">
+                      <reason.icon className="w-8 h-8 text-[#29A5D6]" />
                     </div>
                     {reason.title}
                   </CardTitle>

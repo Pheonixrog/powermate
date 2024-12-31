@@ -90,13 +90,13 @@ export function UserReviews() {
 
   return (
     <div className="container mx-auto px-2 py-6 md:py-16">
-      <div className="max-w-4xl mx-auto text-center px-2 sm:px-4">
+      <div className="max-w-7xl mx-auto text-center px-2 sm:px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="text-purple-400 text-xs sm:text-sm font-mono mb-2 sm:mb-3 md:mb-4 block">04 - USER REVIEWS</span>
+         
           <EnhancedTypography 
             text="User Reviews" 
             className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-3 sm:mb-4 md:mb-6"
@@ -109,7 +109,7 @@ export function UserReviews() {
         </motion.div>
       </div>
 
-      <div className="relative w-full overflow-hidden" ref={carousel}>
+      <div className="relative h-60 w-200 overflow-hidden" ref={carousel}>
         <motion.div 
           className="flex gap-3 sm:gap-4 md:gap-8"
           animate={controls}
@@ -121,24 +121,24 @@ export function UserReviews() {
           {[...reviews, ...reviews].map((review, index) => (
             <MotionCard
               key={index}
-              className="flex-none w-[260px] sm:w-[320px] md:w-96 bg-gray-900/50 backdrop-blur-sm border-purple-500/20 hover:border-purple-400/40 transition-all duration-300"
+              className="flex-none w-[380px]  md:w-120  bg-gray-900/50 backdrop-blur-sm border-purple-500/20 hover:border-purple-400/40 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 sm:gap-4">
-                  <Avatar className="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 ring-2 sm:ring-4 ring-purple-500/30">
+                  <Avatar className="w-20 h-20 sm:w-14 sm:h-14 md:w-16 md:h-16 ring-2 sm:ring-4 ring-purple-500/30">
                     <AvatarImage src={review.avatar} alt={review.name} />
                     <AvatarFallback>{review.name.charAt(0)}</AvatarFallback>
                   </Avatar>
                   <div>
-                    <div className="text-base sm:text-lg md:text-xl font-semibold text-white">{review.name}</div>
+                    <div className="text-base sm:text-2xl md:text-2xl font-semibold text-white">{review.name}</div>
                     <div className="text-xs sm:text-sm text-purple-300/70">{review.username}</div>
                   </div>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm sm:text-base md:text-lg text-gray-300 italic line-clamp-3">&ldquo;{review.content}&rdquo;</p>
+                <p className="text-lg sm:text-base md:text-xl text-gray-300 italic line-clamp-3">&ldquo;{review.content}&rdquo;</p>
               </CardContent>
             </MotionCard>
           ))}
