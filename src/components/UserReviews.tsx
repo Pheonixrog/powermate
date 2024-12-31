@@ -121,19 +121,19 @@ export function UserReviews() {
           {[...reviews, ...reviews].map((review, index) => (
             <MotionCard
               key={index}
-              className="flex-none w-[380px]  md:w-120  bg-gray-900/50 backdrop-blur-sm border-purple-500/20 hover:border-purple-400/40 transition-all duration-300"
+              className="flex-none w-[380px]  md:w-120 backdrop-blur-sm border-[#29A5D6]/20 hover:border-[#29A5D6]/40  transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 sm:gap-4">
-                  <Avatar className="w-20 h-20 sm:w-14 sm:h-14 md:w-16 md:h-16 ring-2 sm:ring-4 ring-purple-500/30">
+                  <Avatar className="w-20 h-20 sm:w-14 sm:h-14 md:w-16 md:h-16 ring-2 sm:ring-4 ring-[#29A5D6]">
                     <AvatarImage src={review.avatar} alt={review.name} />
                     <AvatarFallback>{review.name.charAt(0)}</AvatarFallback>
                   </Avatar>
                   <div>
                     <div className="text-base sm:text-2xl md:text-2xl font-semibold text-white">{review.name}</div>
-                    <div className="text-xs sm:text-sm text-purple-300/70">{review.username}</div>
+                    <div className="text-xs sm:text-sm text-[#29A5D6]/70">{review.username}</div>
                   </div>
                 </CardTitle>
               </CardHeader>

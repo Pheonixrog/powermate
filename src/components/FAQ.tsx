@@ -83,7 +83,7 @@ export function FAQ() {
                             transition={{ duration: 0.3 }}
                             className="p-2 rounded-full bg-purple-500/10"
                           >
-                            <ChevronDown className="w-4 h-4 md:w-5 md:h-5 text-purple-400" />
+                            <ChevronDown className="w-4 h-4 md:w-5 md:h-5 text-[#29A5D6]" />
                           </motion.div>
                         </CardTitle>
                       </CardHeader>

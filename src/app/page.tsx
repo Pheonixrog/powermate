@@ -13,13 +13,13 @@ import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { AboutUs } from "@/components/AboutUs";
 import { Download, Apple } from "lucide-react";
 
-export default function Page() {
-  const [isVisible, setIsVisible] = useState(false);
+// export default function Page() {
+//   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 500);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => setIsVisible(true), 500);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <div className="flex flex-col min-h-screen bg-[url('/background.svg')]  bg-cover bg-center bg-no-repeat"> 
