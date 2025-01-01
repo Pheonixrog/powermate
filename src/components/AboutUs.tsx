@@ -17,13 +17,13 @@ export function AboutUs() {
     <ScrollRevealCard className=" md:p-20">
       <div className="container h-auto min-h-screen w-full mx-auto flex flex-col justify-center items-center px-4 sm:px-8 md:px-12">
         <div className="max-w-4xl w-full">
-          <span className="text-purple-400 text-sm font-mono mb-4 block">07 - About US</span>
+
           <EnhancedTypography 
             text="About Us" 
             className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center"
             gradient={true}
           />
-          <Card className="bg-gray-900/30 backdrop-blur-sm border-purple-500/20">
+          <Card className=" backdrop-blur-sm border-[#29A5D6]/20">
             <CardContent className="p-6 sm:p-8">
               <motion.p 
                 className="text-lg sm:text-xl mb-8 sm:mb-12 text-gray-300 leading-relaxed"
@@ -40,14 +40,14 @@ export function AboutUs() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                   viewport={{ once: true }}
-                  className="p-4 sm:p-6 rounded-xl bg-purple-500/5 backdrop-blur-sm"
+                  className="p-4 sm:p-6 rounded-xl bg-[#29A5D6]/5 backdrop-blur-sm"
                 >
-                  <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-purple-400">Contact Us</h3>
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-[#29A5D6]">Contact Us</h3>
                   <a 
                     href="mailto:info@powermate.app" 
-                    className="flex items-center space-x-3 text-base sm:text-lg text-gray-300 hover:text-purple-400 transition-colors duration-200"
+                    className="flex items-center space-x-3 text-base sm:text-lg text-gray-300 hover:text-[#29A5D6] transition-colors duration-200"
                   >
-                    <div className="p-3 rounded-xl bg-purple-500/10">
+                    <div className="p-3 rounded-xl bg-[#29A5D6]/10">
                       <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <span>info@powermate.app</span>
@@ -58,9 +58,9 @@ export function AboutUs() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 }}
                   viewport={{ once: true }}
-                  className="p-4 sm:p-6 rounded-xl bg-purple-500/5 backdrop-blur-sm"
+                  className="p-4 sm:p-6 rounded-xl bg-[#29A5D6]/5 backdrop-blur-sm"
                 >
-                  <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-purple-400">Follow Us</h3>
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-[#29A5D6]">Follow Us</h3>
                   <div className="flex space-x-3 sm:space-x-4">
                   {socialMediaLinks.map(({ icon: Icon, link }, index) => (
     <a
