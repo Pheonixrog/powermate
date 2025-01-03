@@ -46,7 +46,7 @@ export function FAQ() {
            
             <EnhancedTypography 
               text="Frequently Asked Questions" 
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-center"
+              className="text-3xl sm:text-3xl md:text-7xl lg:text-7xl font-bold mb-4 md:mb-6 text-center"
               gradient={true}
             />
             <EnhancedTypography 

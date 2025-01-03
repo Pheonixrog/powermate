@@ -53,7 +53,7 @@ export function EnhancedTypography({ text, className = "", gradient = false }: E
           variants={child}
           style={{ marginRight: "0.25em" }}
           key={index}
-          className={gradient ? 'bg-clip-text text-transparent bg-[#CAFFE5]' : ''}
+          className={gradient ? 'bg-clip-text text-transparent bg-white' : ''}
         >
           {word}
         </motion.span>

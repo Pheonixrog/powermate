@@ -45,7 +45,7 @@ export function NewsletterSignup() {
             <div className="text-center">
               <button 
                 type="submit" 
-                className="w-full sm:w-auto px-8 py-3 text-white border-[#29A5D6]/10 bg-[#29A5D6] rounded-lg shadow-md hover:from-purple-600 hover:to-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
+                className="w-full sm:w-auto px-8 py-3 text-white border-[#29A5D6] bg-teal-700 rounded-lg shadow-md hover:from-purple-600 hover:to-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all"
               >
                 Subscribe
               </button>

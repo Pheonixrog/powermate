@@ -70,3 +70,18 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes word-fade-in {
+  from {
+    color: black;
+  }
+  to {
+    color: white;
+  }
+}
+
+.animate-word-fade-in {
+  animation: word-fade-in 0.5s ease forwards;
+}
+
+

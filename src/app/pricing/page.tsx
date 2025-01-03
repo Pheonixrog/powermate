@@ -11,16 +11,16 @@ export default function PricingPage() {
   const [isYearly, setIsYearly] = useState(false)
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-950 via-teal-950 to-gray-950 text-white py-20">
+    <div className="flex flex-col bg-[url('/background.svg')]   text-white py-20">
       <Navbar />
       <main className="flex-grow container mx-auto px-4 py-10 ">
         <h1 className="text-3xl font-bold text-center mb-8">Pricing</h1>
         <p className="text-center mb-12">Choose the plan that fits your needs and take control of your screen time</p>
         
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid border  md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Free Plan */}
-          <div className="bg-gray-950 h-full rounded-lg shadow-lg overflow-hidden">
-            <div className="px-6 py-8">
+          <div className=" h-full  rounded-lg border-[#29A5D6] border-2 shadow-lg overflow-hidden">
+            <div className="px-6 py-8 ">
               <h2 className="text-2xl font-bold text-center mb-4">Free Plan</h2>
               <p className="text-center text-gray-400 mb-6">Enjoy Essential Tools For Managing Your App Usage At No Cost</p>
               <div className="text-4xl font-bold text-center mb-6">$0<span className="text-lg font-normal">/month</span></div>
@@ -54,14 +54,14 @@ export default function PricingPage() {
           </div>
 
           {/* Elevate Plan */}
-          <div className="bg-gray-950 rounded-lg shadow-lg overflow-hidden border-2 border-purple-500">
+          <div className=" rounded-lg shadow-lg overflow-hidden border-2 border-[#29A5D6]">
             <div className="px-6 py-8">
-              <div className="bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">Recommended</div>
+              <div className="bg-[#29A5D6] text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">Recommended</div>
               <h2 className="text-2xl font-bold text-center mb-4">Elevate Plan</h2>
               <p className="text-center text-gray-400 mb-6">Unlock The Full Potential Of Focus Tools To Maximize Productivity</p>
               <div className="flex justify-center items-center mb-6">
                 <span className="mr-2">Monthly</span>
-                <Switch checked={isYearly} onCheckedChange={setIsYearly} />
+                <Switch  checked={isYearly} onCheckedChange={setIsYearly} />
                 <span className="ml-2">Yearly</span>
               </div>
               {isYearly ? (
@@ -73,7 +73,7 @@ export default function PricingPage() {
               ) : (
                 <div className="text-4xl font-bold text-center mb-6">$2.99<span className="text-lg font-normal">/month</span></div>
               )}
-              <Link href="/"><Button className="w-full bg-purple-500 hover:bg-purple-600">Start Free Week</Button></Link>
+              <Link href="/"><Button className="w-full bg-[#29A5D6]  hover:bg-[#29A5D6]/40">Start Free Week</Button></Link>
             </div>
             <div className="px-6 py-8 bg-gray-900">
               <h3 className="font-semibold mb-4">Features</h3>

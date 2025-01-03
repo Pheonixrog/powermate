@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Download, Menu, X } from 'lucide-react';
+import { Menu, X } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/dialog";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { Download, Apple } from "lucide-react";
 
 export function Navbar() {
   // const [isScrolled, setIsScrolled] = useState(false);
@@ -62,16 +63,11 @@ export function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      style={{ position: 'fixed', top: 0, zIndex: 50 }}
+      style={{ position: "fixed", top: 0, zIndex: 50 }}
     >
       <nav
         className={`
           transition-all duration-500 rounded-full w-full max-w-7xl
-          // {
-          //   isScrolled
-          //     ? "bg-gradient-to-b from-gray-950 to-gray-900 backdrop-blur-md shadow-lg shadow-purple-500/10"
-          //     : "bg-gradient-to-b from-gray-950 to-gray-950 backdrop-blur-sm"
-          // }
           border border-purple-500/20 hover:border-purple-500/30
         `}
       >
@@ -87,7 +83,7 @@ export function Navbar() {
                 alt="Powermate Logo"
                 width={140}
                 height={28}
-                className="group-hover:rotate-12 transition-transform duration-300 md:w-[220px] lg:w-[250px]"
+                className="transition ease-in-out delay-100  hover:-translate-y-1 hover:scale-110  duration-200 md:w-[220px] lg:w-[250px]"
               />
             </Link>
           </motion.div>
@@ -138,7 +134,7 @@ export function Navbar() {
                   </Button>
                 </motion.div>
               </DialogTrigger>
-              <DialogContent className="bg-gray-900/95 backdrop-blur-md border-purple-500/20">
+              <DialogContent className="bg-gray-950 backdrop-blur-md border-purple-500/20">
                 <DialogHeader>
                   <DialogTitle className="text-white">
                     Download Powermate
@@ -159,6 +155,24 @@ export function Navbar() {
                     height={300}
                   />
                 </motion.div>
+                <div className="h-20 mt-5 md:mt-5 w-100 overflow-hidden flex flex-col sm:flex-row gap-4 justify-center items-center lg:justify-start">
+                  <a className="flex overflow-hidden justify-center items-center gap-2   font-bold  px-6  rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+                    <Image
+                      width={200}
+                      height={20}
+                      src="/googleplaybutton.svg"
+                      alt="Google Play"
+                    />
+                  </a>
+                  <a className="flex overflow-hidden items-center justify-center gap-2  font-bold  px-6  md:px-8 rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+                    <Image
+                      width={200}
+                      height={20}
+                      src="/appstorebutton.svg"
+                      alt="App Store"
+                    />
+                  </a>
+                </div>
               </DialogContent>
             </Dialog>
           </div>
@@ -185,7 +199,7 @@ export function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.2 }}
-              className="md:hidden absolute left-2 right-2 mt-2 p-3 bg-gray-900 border border-purple-500/20 rounded-2xl shadow-lg"
+              className="md:hidden absolute left-2 right-2 mt-2 p-3 bg-gray-950 border border-purple-500/20 rounded-2xl shadow-lg"
             >
               <div className="flex flex-col space-y-1">
                 {/* {navSections.map(({ id, label }) => (
@@ -245,6 +259,24 @@ export function Navbar() {
                         height={300}
                       />
                     </motion.div>
+                    <div className="h-20 mt-5 md:mt-5 w-100 overflow-hidden flex flex-col sm:flex-row gap-4 justify-center items-center lg:justify-start">
+                      <a className="flex overflow-hidden justify-center items-center gap-2   font-bold  px-6  rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+                        <Image
+                          width={200}
+                          height={20}
+                          src="/googleplaybutton.svg"
+                          alt="Google Play"
+                        />
+                      </a>
+                      <a className="flex overflow-hidden items-center justify-center gap-2  font-bold  px-6  md:px-8 rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+                        <Image
+                          width={200}
+                          height={20}
+                          src="/appstorebutton.svg"
+                          alt="App Store"
+                        />
+                      </a>
+                    </div>
                   </DialogContent>
                 </Dialog>
               </div>
@@ -255,4 +287,3 @@ export function Navbar() {
     </motion.div>
   );
 }
-
