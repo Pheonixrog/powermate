@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/dialog";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Download, Apple } from "lucide-react";
+import { Download } from "lucide-react";
 
 export function Navbar() {
   // const [isScrolled, setIsScrolled] = useState(false);

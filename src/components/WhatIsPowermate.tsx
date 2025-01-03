@@ -1,6 +1,6 @@
 "use client";
 import { FullScreenSection } from "./FullScreenSection";
-import { EnhancedTypography } from "./EnhancedTypography";
+
 import { motion } from "framer-motion";
 import { VideoPlayer } from "@/components/VideoPlayer";
 import Image from "next/image";
