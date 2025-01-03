@@ -19,7 +19,7 @@ export default function PricingPage() {
         
         <div className="grid border  md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Free Plan */}
-          <div className=" h-full  rounded-lg border-[#29A5D6] border-2 shadow-lg overflow-hidden">
+          <div className=" h-full  rounded-lg border-[#CAFFE5] border-2 shadow-lg overflow-hidden">
             <div className="px-6 py-8 ">
               <h2 className="text-2xl font-bold text-center mb-4">Free Plan</h2>
               <p className="text-center text-gray-400 mb-6">Enjoy Essential Tools For Managing Your App Usage At No Cost</p>
@@ -54,7 +54,7 @@ export default function PricingPage() {
           </div>
 
           {/* Elevate Plan */}
-          <div className=" rounded-lg shadow-lg overflow-hidden border-2 border-[#29A5D6]">
+          <div className=" rounded-lg shadow-lg overflow-hidden border-2 border-[#CAFFE5]">
             <div className="px-6 py-8">
               <div className="bg-[#29A5D6] text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">Recommended</div>
               <h2 className="text-2xl font-bold text-center mb-4">Elevate Plan</h2>

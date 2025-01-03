@@ -26,10 +26,10 @@ export default function Page() {
       <Navbar />
       <main className="flex-grow ">
         <ScrollReveal>
-          <section className="sm:pt-0 h-full w-full ">
+          <section className="md:mt-0 md:mb-0 mt-20 mb-60 h-full w-full ">
             <div className="container mx-auto px-4">
-              <div className="flex flex-col items-center justify-center mt-5 "></div>
-              <div className="sm:pt-0 sm:px-0 px-5  grid md:mx-40 md:mt-20  gap-5 lg:gap-16 items-center justify-center">
+              <div className="flex flex-col  "></div>
+              <div className="pt-10 md:pt-0 sm:px-0 px-5  grid md:mx-40   gap-5 lg:gap-16 items-center justify-center">
                 <div className=" text-center  lg:text-left ">
                   <p className="text-5xl md:text-7xl lg:text-7xl xl:text-9xl font-bold mb-4 md:mb-6 text-white">
                     Control Your{" "}

@@ -35,7 +35,7 @@ export function ScrollReveal({ children }: ScrollRevealProps) {
         opacity: { duration: 0.5 },
         y: { type: "spring", stiffness: 100 }
       }}
-      className="min-h-screen flex items-center justify-center py-20"
+      className="md:min-h-screen flex items-center justify-center "
     >
       <motion.div
         initial={{ opacity: 0 }}

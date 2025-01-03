@@ -68,7 +68,7 @@ export function Navbar() {
       <nav
         className={`
           transition-all duration-500 rounded-full w-full max-w-7xl
-          border border-purple-500/20 hover:border-purple-500/30
+          border border-[#CAFFE5] hover:border-[#CAFFE5]/20
         `}
       >
         <div className="px-4 sm:px-6 py-2 sm:py-3 flex items-center justify-between">
@@ -114,7 +114,7 @@ export function Navbar() {
                 whileTap={{ scale: 0.95 }}
                 className={`
                   px-4 py-2 text-lg lg:text-xl rounded-full transition-all duration-300
-                  text-gray-300 hover:text-white hover:bg-purple-500/10
+                  text-gray-300 hover:text-white hover:bg-[#CAFFE5]/10
                 `}
               >
                 Pricing
@@ -128,7 +128,7 @@ export function Navbar() {
                 >
                   <Button
                     variant="ghost"
-                    className="text-gray-300 hover:text-white hover:bg-purple-500/10 text-lg lg:text-xl rounded-full"
+                    className="text-gray-300 hover:text-white hover:[#CAFFE5]/10 text-lg lg:text-xl rounded-full"
                   >
                     <Download className="mr-2 h-4 w-4" /> Download
                   </Button>
