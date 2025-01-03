@@ -26,7 +26,7 @@ export default function Page() {
       <Navbar />
       <main className="flex-grow ">
         <ScrollReveal>
-          <section className="sm:pt-0 ">
+          <section className="sm:pt-0 h-full w-full ">
             <div className="container mx-auto px-4">
               <div className="flex flex-col items-center justify-center mt-5 "></div>
               <div className="sm:pt-0 sm:px-0 px-5  grid md:mx-40 md:mt-20  gap-5 lg:gap-16 items-center justify-center">
@@ -40,21 +40,30 @@ export default function Page() {
                     <div className="text-center flex flex-col items-center justify-center">
                       <EnhancedTypography
                         text="Stay focused and connected because doom scrolling at 2 AM isn't the vibe."
-                        className="text-xl md:text-3xl lg:text-5xl text-white mx-3 md:mx-0"
+                        className="text-2xl md:text-3xl lg:text-5xl text-white mx-3 md:mx-0"
                       />
 
-                      <div className="h-20 mt-5 md:mt-5 w-100 overflow-hidden flex flex-col sm:flex-row gap-4 justify-center items-center lg:justify-start">
-                        <a className="flex overflow-hidden justify-center items-center gap-2   font-bold  px-6  rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
-                          <Image width={200} height={20} src="/googleplaybutton.svg" alt="Google Play" />
+                      <div className="h-auto absolute mt-5 w-full  flex flex-col sm:flex-col gap-4 justify-center items-center lg:justify-start">
+                        <div className="mt-10 md:mt-0 relative flex flex-col md:flex-row gap-4 md:top-32 top-32">
+                        <a className="md:top-0 top-20 relative overflow-hidden flex justify-center items-center gap-2 font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+                          <Image
+                            width={200} // Adjusted for responsiveness
+                            height={20}
+                            src="/googleplaybutton.svg"
+                            alt="Google Play"
+                          />
                         </a>
-                        <a className="flex overflow-hidden items-center justify-center gap-2  font-bold  px-6  md:px-8 rounded-full text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
-                          <Image 
-                          width={200}
-                          height={20}
-                          
-                          src="/appstorebutton.svg" 
-                          alt="App Store" />
+                        <a className="relative overflow-hidden bottom-20 md:bottom-0  flex justify-center items-center gap-2 font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base md:text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+                          <Image
+                            width={205} // Adjusted for responsiveness
+                            height={20}
+                            src="/appstorebutton.svg"
+                            alt="App Store"
+                          />
                         </a>
+
+                        </div>
+                        
                       </div>
                     </div>
                     {/* <div>
