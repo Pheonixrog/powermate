@@ -42,7 +42,7 @@ export default function Page() {
         />
       </div>
 
-      <div className=" z-10 flex flex-col min-h-screen bg-[#041116] bg-center bg-no-repeat">
+      <div className=" z-10 flex flex-col min-h-screen bg-black bg-center bg-no-repeat">
         <Navbar />
         <main className="flex-grow relative">
           <ScrollReveal>
