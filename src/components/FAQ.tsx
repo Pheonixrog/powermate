@@ -3,10 +3,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollRevealCard } from "./ScrollRevealCard";
-import { EnhancedTypography } from "./EnhancedTypography";
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronDown } from "lucide-react";
-import Image from "next/image";
+
 
 const faqs = [
   {

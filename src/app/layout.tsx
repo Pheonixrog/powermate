@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Azeret_Mono as Geist_Mono } from "next/font/google";
 import "./globals.css";
-import React, { ReactNode } from "react";
+
 
 
 
