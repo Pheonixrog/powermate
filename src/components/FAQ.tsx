@@ -11,23 +11,19 @@ import Image from "next/image";
 const faqs = [
   {
     question: "What happens when I hit my time limit?",
-    answer:
-      "Powermate blocks your chosen apps. If you need more time, request it from your friends. They decide!",
+    answer: "Powermate blocks your chosen apps. If you need more time, request it from your friends. They decide!",
   },
   {
     question: "Can I use Powermate alone?",
-    answer:
-      "Yes! You can set limits and block apps, but it's more fun with friends and helps keep you accountable!",
+    answer: "Yes! You can set limits and block apps, but it's more fun with friends and helps keep you accountable!",
   },
   {
     question: "Is Powermate available on iOS and Android?",
-    answer:
-      "Yes! Powermate is available on the iOS App Store now, and the Android version is coming soon to Google Play.",
+    answer: "Yes! Powermate is available on the iOS App Store now, and the Android version is coming soon to Google Play.",
   },
   {
     question: "How does Powermate block apps?",
-    answer:
-      "After your time's up, Powermate handles the blocking. Friends can approve extra time if needed.",
+    answer: "After your time's up, Powermate handles the blocking. Friends can approve extra time if needed.",
   },
   {
     question: "Can I choose which apps to block?",
@@ -35,8 +31,7 @@ const faqs = [
   },
   {
     question: "Are there any rewards?",
-    answer:
-      "Yes! Earn badges for meeting your goals and staying on track. It's a fun way to visualize your progress!",
+    answer: "Yes! Earn badges for meeting your goals and staying on track. It's a fun way to visualize your progress!",
   },
 ];
 
@@ -47,37 +42,29 @@ export function FAQ() {
     <div className="w-full h-full px-4 md:px-8">
       <ScrollRevealCard className="p-6 md:p-12 lg:p-20">
         <div className="container mx-auto">
-          <div className="md:flex md:flex-row sm:flex sm:flex-col max-w-8xl mx-auto">
-            <div className="max-w-3xl pl-10 flex justify-center items-center flex-col">
-              <div className="flex flex-col  ">
-                <span >
-                <span className="text-5xl sm:text-4xl md:text-7xl lg:text-8xl text-[#CAFFE5] font-bold">
-                  Frequently
-                </span>
-                <span>
-                <EnhancedTypography
-                  text=" Asked Questions"
-                  className="text-5xl sm:text-3xl md:text-7xl lg:text-8xl font-bold  md:mb-6 "
-                  gradient={true}
-                />
-                </span>
-                </span>
-              </div>
-              {/* <EnhancedTypography
-                text="Common questions from our users."
-                className="text-sm text-start sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-12  text-gray-300"
-              /> */}
-              <Image
-                src="/Video mascots/Video mascots/GIF/2-pointing-animation.gif"
-                width={500}
-                height={500}
-                className="sm:w-1/2 object-contain ml:mr-10 sm:ml-10 "
-                alt="Mascot Animation"
+          {/* FAQ Heading at the top */}
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center">
+              <span className="text-5xl sm:text-4xl md:text-7xl lg:text-8xl text-[#CAFFE5] font-bold">
+                FAQ
+              </span>
+              
+            </span>
+          </div>
+
+          <div className="flex flex-row items-center justify-between ">
+            {/* Mascot on the left */}
+            <div className="hidden lg:block w-1/4">
+              <img 
+                src="/App mascots/App mascots/PNG/ThumbsUp.png"
+                alt="Mascot"
+                className="w-full h-auto"
               />
             </div>
 
-            <div className="sm:flex sm:flex-row sm:items-start sm:space-y-0 sm:space-x-6 w-full max-w-4xl ">
-              <div className="space-y-4 w-full max-w-3xl">
+            {/* FAQs on the right */}
+            <div className="flex-1 max-w-5xl">
+              <div className="space-y-4">
                 {faqs.map((faq, index) => (
                   <motion.div
                     key={index}
@@ -86,19 +73,17 @@ export function FAQ() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <Card className=" backdrop-blur-sm border-[#29A5D6]/20  hover:border-[#29A5D6]/40  transition-all duration-300">
+                    <Card className="backdrop-blur-sm border-[#CAFFE5] bg-[#CAFFE5] bg-opacity-10 transition-all duration-300">
                       <CardHeader
                         className="cursor-pointer p-4 md:p-6"
-                        onClick={() =>
-                          setOpenIndex(openIndex === index ? null : index)
-                        }
+                        onClick={() => setOpenIndex(openIndex === index ? null : index)}
                       >
-                        <CardTitle className="flex  justify-between items-center text-sm sm:text-base md:text-lg lg:text-xl">
-                          <span>{faq.question}</span>
+                        <CardTitle className="flex justify-between items-center text-sm sm:text-base md:text-lg lg:text-3xl">
+                          <span className="pr-8">{faq.question}</span>
                           <motion.div
                             animate={{ rotate: openIndex === index ? 180 : 0 }}
                             transition={{ duration: 0.3 }}
-                            className="p-2 rounded-full bg-purple-500/10"
+                            className="p-2 rounded-full  flex-shrink-0"
                           >
                             <ChevronDown className="w-4 h-4 md:w-5 md:h-5 text-[#CAFFE5]" />
                           </motion.div>
@@ -113,7 +98,7 @@ export function FAQ() {
                             transition={{ duration: 0.3 }}
                           >
                             <CardContent className="px-4 md:px-6 py-2 md:py-4">
-                              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-300">
+                              <p className="text-xs sm:text-sm md:text-base lg:text-2xl text-gray-300">
                                 {faq.answer}
                               </p>
                             </CardContent>

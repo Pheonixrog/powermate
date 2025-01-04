@@ -12,14 +12,12 @@ const steps = [
   },
   {
     title: "Protect your limits",
-    description:
-      "When you've hit your limit, I step in to block apps and keep you focused.",
+    description: "When you've hit your limit, I step in to block apps and keep you focused.",
     image: "/image2.svg",
   },
   {
     title: "Friends Support",
-    description:
-      "Need a little more time? Ask your friends to unlock it - only if you really need it!",
+    description: "Need a little more time? Ask your friends to unlock it - only if you really need it!",
     image: "/image3.svg",
   },
   {
@@ -31,51 +29,60 @@ const steps = [
 
 export function HowPowermateWorks() {
   return (
-    <FullScreenSection id="how" className="flex items-center justify-center">
-      <div className="container mx-auto px-4 ">
-        <div className="flex flex-col items-center text-center mb-8">
-          <h2 className="flex flex-col md:flex-row items-center gap-2 text-center">
-            <span className="text-5xl sm:text-4xl md:text-5xl lg:text-7xl font-bold">
+    <FullScreenSection id="how" className="flex items-center justify-center py-20">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col items-center text-center mb-16">
+          <h2 className="flex flex-col md:flex-row items-center gap-2 text-center mb-6">
+            <span className="text-4xl md:text-5xl lg:text-7xl font-bold">
               How
             </span>
-            <span className="text-5xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-[#CAFFE5]">
+            <span className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#CAFFE5]">
               Powermate
             </span>
-            <span className="text-5xl sm:text-4xl md:text-5xl lg:text-7xl font-bold">
+            <span className="text-4xl md:text-5xl lg:text-7xl font-bold">
               Works?
             </span>
           </h2>
-          <p className="text-gray-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mt-4">
-            Follow the journey of taking control of your screen time with
-            Powermate
+          <p className="text-gray-300 text-lg md:text-3xl max-w-2xl mx-auto">
+            Follow the journey of taking control of your screen time with Powermate
           </p>
         </div>
 
-        <div className="relative h-auto md:h-[70vh] w-full flex flex-col md:block gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {steps.map((step, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: -50, y: -50 }}
-              animate={{ opacity: 1, x: 0, y: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.5,
-                delay: 2 + index, // Delay increases sequentially
+                duration: 0.8,
+                delay: index * 0.3, // Reduced delay for smoother sequence
+                ease: "easeOut"
               }}
-              className={`md:absolute ${getPositionClass(index)} md:static`}
+              viewport={{ once: true, amount: 0.3 }}
             >
-              <Card className="w-full md:w-64 h-auto md:h-72    border-[#CAFFE5] hover:border-[#CAFFE5]/20 transition-all duration-300 hover:scale-105 hover:-translate-y-2">
-                <CardContent className="p-4 flex flex-col items-center justify-between h-full">
-                  <img
-                    src={step.image}
-                    alt={step.title}
-                    className="w-auto h-24 object-cover rounded-lg mb-2"
-                  />
-                  <h3 className="text-lg text-[#29A5D6] font-semibold mb-1 text-center">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-300 text-sm text-center">
-                    {step.description}
-                  </p>
+              <Card className="border-[#CAFFE5] backdrop-blur-sm bg-[#CAFFE5] bg-opacity-10 text-white h-[400px] transition-all duration-300 hover:scale-105 group">
+                <CardContent className="p-6 flex flex-col items-center h-full">
+                  {/* Top section with image */}
+                  <div className="flex-grow flex items-center justify-center mb-6">
+                    <div className="w-28 h-28 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2">
+                      <img
+                        src={step.image}
+                        alt={step.title}
+                        className="w-auto h-full object-contain"
+                      />
+                    </div>
+                  </div>
+                  
+                  {/* Bottom section with text */}
+                  <div className="flex flex-col items-center justify-end space-y-4">
+                    <h3 className="text-2xl md:text-3xl text-[#29A5D6] font-semibold text-center">
+                      {step.title}
+                    </h3>
+                    <p className="text-xl md:text-2xl text-gray-300 text-center">
+                      {step.description}
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
@@ -84,22 +91,4 @@ export function HowPowermateWorks() {
       </div>
     </FullScreenSection>
   );
-}
-
-function getPositionClass(index: number): string {
-  if (typeof window !== "undefined" && window.innerWidth < 768) {
-    return ""; // No specific positioning for mobile
-  }
-  switch (index) {
-    case 0:
-      return "top-0 left-0";
-    case 1:
-      return "top-20 left-1/4";
-    case 2:
-      return "top-40 left-2/4";
-    case 3:
-      return "top-60 left-3/4";
-    default:
-      return "";
-  }
 }

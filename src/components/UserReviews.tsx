@@ -10,43 +10,37 @@ const reviews = [
   {
     name: "Anna Joe",
     username: "@anna-9",
-    content:
-      "Using Powermate has completely changed my screen habits! I've cut down on mindless scrolling and actually use my time more wisely. Even my friends are surprised. The app limit feature keeps me on track every day.",
+    content: "Using Powermate has completely changed my screen habits! I've cut down on mindless scrolling and actually use my time more wisely. Even my friends are surprised. The app limit feature keeps me on track every day.",
     avatar: "/r1.svg",
   },
   {
     name: "James",
     username: "@james_1",
-    content:
-      "I love the Powergroup feature! My friends and I keep each other accountable, and it's been a huge help in staying focused during busy workdays. No more wasted hours!",
+    content: "I love the Powergroup feature! My friends and I keep each other accountable, and it's been a huge help in staying focused during busy workdays. No more wasted hours!",
     avatar: "/r3.jpeg",
   },
   {
     name: "Maya",
     username: "@ashhy",
-    content:
-      "As a student, staying focused on my studies was always a challenge, but Powermate has really changed that! By helping me block distracting apps, I can concentrate better and stick to my study goals.",
+    content: "As a student, staying focused on my studies was always a challenge, but Powermate has really changed that! By helping me block distracting apps, I can concentrate better and stick to my study goals.",
     avatar: "/r2.svg",
   },
   {
     name: "David Chen",
     username: "@dchen",
-    content:
-      "The analytics feature is incredible! Being able to see my daily app usage patterns has made me much more mindful of how I spend my time online. It's like having a personal productivity coach.",
+    content: "The analytics feature is incredible! Being able to see my daily app usage patterns has made me much more mindful of how I spend my time online. It's like having a personal productivity coach.",
     avatar: "/r4.svg",
   },
   {
     name: "Sarah Miller",
     username: "@sarah_m",
-    content:
-      "What I love most about Powermate is how it helps me maintain a healthy work-life balance. The custom schedules feature lets me stay focused during work hours while ensuring I disconnect properly afterward.",
+    content: "What I love most about Powermate is how it helps me maintain a healthy work-life balance. The custom schedules feature lets me stay focused during work hours while ensuring I disconnect properly afterward.",
     avatar: "/r5.svg",
   },
   {
     name: "Alex Thompson",
     username: "@alex_t",
-    content:
-      "The integration with other productivity apps is seamless. I can track my screen time, manage my tasks, and stay focused all from one place. It's become an essential part of my daily routine.",
+    content: "The integration with other productivity apps is seamless. I can track my screen time, manage my tasks, and stay focused all from one place. It's become an essential part of my daily routine.",
     avatar: "/r6.svg",
   },
 ];
@@ -103,18 +97,18 @@ export function UserReviews() {
           transition={{ duration: 0.5 }}
         >
           <span className="flex flex-row justify-center items-center">
-          <span>
-            <EnhancedTypography
-              text="User "
-              className="text-5xl  flex justify-center items-center sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
-              gradient={true}
-            />
-          </span>
-          <span className="text-5xl  flex justify-center text-[#CAFFE5] items-center sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Reviews</span>
+            <span>
+              <EnhancedTypography
+                text="User "
+                className="text-5xl flex justify-center items-center sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4"
+                gradient={true}
+              />
+            </span>
+            <span className="text-5xl flex justify-center text-[#CAFFE5] items-center sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4">Reviews</span>
           </span>
           <EnhancedTypography
             text="See what others are saying."
-            className="text-lg sm:text-xl justify-center items-center md:text-2xl text-gray-300"
+            className="text-lg sm:text-xl justify-center items-center md:text-3xl text-gray-300"
           />
         </motion.div>
       </div>
@@ -131,18 +125,18 @@ export function UserReviews() {
           {[...reviews, ...reviews].map((review, index) => (
             <MotionCard
               key={index}
-              className="flex-none w-[300px] sm:w-[350px] md:w-[400px] md:h-60 backdrop-blur-sm border-[#29A5D6]/20 hover:border-[#29A5D6]/40 transition-all duration-300"
+              className="flex-none w-[400px] h-[320px] backdrop-blur-sm border-[#CAFFE5] bg-[#CAFFE5] bg-opacity-10 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <CardHeader>
+              <CardHeader className="p-6">
                 <CardTitle className="flex items-center gap-4">
-                  <Avatar className="w-12 h-12 sm:w-14 sm:h-14 ring-2 ring-[#29A5D6]">
+                  <Avatar className="w-14 h-14 ring-2 ring-[#29A5D6]">
                     <AvatarImage src={review.avatar} alt={review.name} />
                     <AvatarFallback>{review.name.charAt(0)}</AvatarFallback>
                   </Avatar>
                   <div>
-                    <div className="text-lg sm:text-xl font-semibold text-white">
+                    <div className="text-xl font-semibold text-white">
                       {review.name}
                     </div>
                     <div className="text-sm text-[#29A5D6]/70">
@@ -151,8 +145,8 @@ export function UserReviews() {
                   </div>
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-xl sm:text-base text-gray-300 italic">
+              <CardContent className="px-6">
+                <p className="text-xl text-gray-300 italic leading-relaxed">
                   &ldquo;{review.content}&rdquo;
                 </p>
               </CardContent>

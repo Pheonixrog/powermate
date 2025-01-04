@@ -1,39 +1,39 @@
-import type { Metadata } from 'next'
-import { Geist, Azeret_Mono as Geist_Mono } from 'next/font/google'
-import './globals.css'
+import type { Metadata } from "next";
+import { Geist, Azeret_Mono as Geist_Mono } from "next/font/google";
+import "./globals.css";
+import React, { ReactNode } from "react";
+
+
 
 const geistSans = Geist({
-  subsets: ['latin'],
-  variable: '--font-sans',
-})
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 const geistMono = Geist_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-})
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
-  title: 'Powermate - Take Control of Your Screen Time',
-  description: 'Manage your app usage and boost productivity with Powermate',
+  title: "Powermate - Take Control of Your Screen Time",
+  description: "Manage your app usage and boost productivity with Powermate",
   icons: {
-    icon: '/favicon.png',
+    icon: "/favicon.png",
   },
-}
-
-
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-gray-900 text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased  relative z-10 `}
       >
         {children}
       </body>
     </html>
-  )
+  );
 }
-
