@@ -68,7 +68,7 @@ export function Navbar() {
       <nav
         className={`
           transition-all duration-500 rounded-full w-full max-w-7xl
-          border border-[#CAFFE5] hover:border-[#CAFFE5]/20
+          border border-[#CAFFE5] hover:border-[#CAFFE5]/20 bg-gray-950 bg-opacity-80
         `}
       >
         <div className="px-4 sm:px-6 py-2 sm:py-3 flex items-center justify-between">

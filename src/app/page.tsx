@@ -22,8 +22,8 @@ export default function Page() {
           className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: `
-              linear-gradient(#4fd1c5 0.5px, transparent 0.5px),
-              linear-gradient(90deg, #4fd1c5 0.5px, transparent 0.5px)
+              linear-gradient(#4fd1c5 1px, transparent 1px),
+              linear-gradient(90deg, #4fd1c5 1px, transparent 1px)
             `,
             backgroundSize: "20px 20px",
           }}
