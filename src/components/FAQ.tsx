@@ -73,7 +73,7 @@ export function FAQ() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <Card className="backdrop-blur-sm border-[#CAFFE5] bg-[#CAFFE5] bg-opacity-10 transition-all duration-300">
+                    <Card className="backdrop-blur-sm border-[#CAFFE5] bg-gray-900  transition-all duration-300">
                       <CardHeader
                         className="cursor-pointer p-4 md:p-6"
                         onClick={() => setOpenIndex(openIndex === index ? null : index)}

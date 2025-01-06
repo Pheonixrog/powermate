@@ -16,33 +16,9 @@ import Image from "next/image";
 export default function Page() {
   return (
     <>
-      <div className="absolute inset-0">
-        {/* Base Grid */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `
-              linear-gradient(#4fd1c5 1px, transparent 1px),
-              linear-gradient(90deg, #4fd1c5 1px, transparent 1px)
-            `,
-            backgroundSize: "20px 20px",
-          }}
-        />
+      
 
-        {/* Thicker lines every 2nd row and column */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `
-              linear-gradient(#4fd1c5 2px, transparent 2px),
-              linear-gradient(90deg, #4fd1c5 2px, transparent 2px)
-            `,
-            backgroundSize: "40px 40px",
-          }}
-        />
-      </div>
-
-      <div className=" z-10 flex flex-col min-h-screen bg-black bg-center bg-no-repeat">
+      <div className=" z-10 flex flex-col min-h-screen bg-gray-950 bg-center bg-no-repeat">
         <Navbar />
         <main className="flex-grow relative">
           <ScrollReveal>
