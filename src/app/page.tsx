@@ -24,7 +24,7 @@ export default function Page() {
           <ScrollReveal>
             <section className="mt-20  h-full w-full">
               <div className="container mx-auto px-4 py-20">
-                <p className="text-5xl md:text-7xl py-10 font-bold mb-6 text-white">
+                <p className="text-5xl md:text-7xl py-5 font-bold mb-6 text-white">
                   Control Your{" "}
                   <span className="text-[#CAFFE5]">Screen Time</span> With
                   Friends

@@ -44,7 +44,7 @@ export function HowPowermateWorks() {
             </span>
           </h2>
           <p className="text-gray-300 text-lg md:text-3xl max-w-2xl mx-auto">
-            Follow the journey of taking control of your screen time with Powermate
+            Follow the journey of taking control of your screen time with Powermate in 4 simple steps...
           </p>
         </div>
 
