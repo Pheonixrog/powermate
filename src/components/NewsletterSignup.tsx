@@ -4,7 +4,14 @@ import { motion } from "framer-motion";
 
 export function NewsletterSignup() {
   return (
-    <section className="py-12 min-h-screen flex items-center justify-center">
+    <section className="py-12 min-h-screen flex flex-col items-center ">
+       <div className=" hidden lg:block w-1/5">
+              <img 
+                src="/App mascots/App mascots/PNG/ThumbsUp.png"
+                alt="Mascot"
+                className="w-full h-auto"
+              />
+            </div>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

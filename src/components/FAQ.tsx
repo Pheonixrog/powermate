@@ -52,18 +52,12 @@ export function FAQ() {
             </span>
           </div>
 
-          <div className="flex flex-row items-center justify-between ">
+          <div className="flex flex-col items-center justify-between ">
             {/* Mascot on the left */}
-            <div className="hidden lg:block w-1/4">
-              <img 
-                src="/App mascots/App mascots/PNG/ThumbsUp.png"
-                alt="Mascot"
-                className="w-full h-auto"
-              />
-            </div>
+           
 
             {/* FAQs on the right */}
-            <div className="flex-1 max-w-5xl">
+            <div className="w-full max-w-7xl">
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
                   <motion.div
@@ -109,7 +103,9 @@ export function FAQ() {
                   </motion.div>
                 ))}
               </div>
+
             </div>
+           
           </div>
         </div>
       </ScrollRevealCard>
