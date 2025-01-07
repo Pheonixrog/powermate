@@ -69,7 +69,7 @@ export function HowPowermateWorks() {
               <Card className="border-[#CAFFE5] backdrop-blur-sm bg-[#CAFFE5] bg-opacity-10 text-white h-[400px] transition-all duration-300 hover:scale-105 group relative overflow-hidden">
                 <CardContent className="p-6 flex flex-col items-center h-full relative z-10">
                   {/* Background number */}
-                  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center z-0 opacity-[0.02] transition-opacity duration-300 group-hover:opacity-20">
+                  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center z-0 opacity-[0.02] transition-opacity duration-300 group-hover:opacity-10">
                     <span className="text-[400px] font-bold text-white">
                       {index + 1}
                     </span>
