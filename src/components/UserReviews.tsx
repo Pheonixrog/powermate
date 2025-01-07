@@ -108,7 +108,7 @@ export function UserReviews() {
           </span>
           <EnhancedTypography
             text="See what others are saying."
-            className="text-lg sm:text-xl justify-center items-center md:text-3xl text-gray-300"
+            className="text-2xl sm:text-xl justify-center items-center md:text-3xl text-gray-300"
           />
         </motion.div>
       </div>

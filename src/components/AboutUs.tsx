@@ -47,7 +47,7 @@ export function AboutUs() {
           <Card className="border-teal-950 bg-gray-900 bg-opacity-80 border-[#0D3544]/20">
             <CardContent className="p-6 sm:p-8">
               <motion.p
-                className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 text-gray-300 leading-relaxed"
+                className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 text-gray-300 leading-relaxed justify-center items-center text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}

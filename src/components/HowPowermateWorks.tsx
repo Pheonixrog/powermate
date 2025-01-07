@@ -38,17 +38,17 @@ export function HowPowermateWorks() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="flex flex-col md:flex-row items-center gap-2 text-center mb-6">
-            <span className="text-4xl md:text-5xl lg:text-7xl font-bold">
+            <span className="text-5xl md:text-5xl lg:text-7xl font-bold">
               How
             </span>
-            <span className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#CAFFE5]">
+            <span className="text-5xl md:text-5xl lg:text-7xl font-bold text-[#CAFFE5]">
               Powermate
             </span>
-            <span className="text-4xl md:text-5xl lg:text-7xl font-bold">
+            <span className="text-5xl md:text-5xl lg:text-7xl font-bold">
               Works?
             </span>
           </h2>
-          <p className="text-gray-300 text-lg md:text-3xl max-w-2xl mx-auto">
+          <p className="text-gray-300 text-2xl md:text-3xl max-w-2xl mx-auto">
             In 4 simple steps...
           </p>
         </motion.div>

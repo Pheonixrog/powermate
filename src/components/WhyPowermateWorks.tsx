@@ -45,7 +45,7 @@ export function WhyPowermateWorks() {
           animate={{ y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 flex flex-row items-center justify-center gap-2 sm:gap-4 text-center">
+          <h2 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 flex flex-row items-center justify-center gap-2 sm:gap-4 text-center">
             <span>
               Why <span className="text-[#CAFFE5]">Powermate</span>{" "}
               <span>Works?</span>
@@ -54,7 +54,7 @@ export function WhyPowermateWorks() {
 
           <EnhancedTypography
             text="More than just blocking apps - Powermate helps you build a life that's calmer and more connected. Here's how:"
-            className="text-lg  sm:text-xl md:text-3xl  text-gray-300 text-center"
+            className="text-2xl  sm:text-xl md:text-3xl  text-gray-300 text-center justify-center"
           />
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">

@@ -22,7 +22,7 @@ export function WhatIsPowermate() {
                 className="text-5xl sm:text-5xl md:text-7xl font-bold mb-6"
                 gradient={true}
               /> */}
-              <div className="my-0 pt-20 md:my-20 relative flex items-center justify-center md:items-center md:justify-center">
+              <div className="my-0 md:pt-20 pt-0 md:my-20 relative flex items-center justify-center md:items-center md:justify-center">
                 <div className="absolute inset-0 bg-gradient-to-r " />
                 <p className="relative  pl-2 md:pl-40 text-2xl sm:text-2xl md:text-5xl leading-relaxed mb-8 ">
                   {`We know it's hard to stop doomscrolling, so we made a gamified app where friends and family help keep you accountable. `

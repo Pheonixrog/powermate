@@ -12,7 +12,7 @@ export function VideoPlayer() {
   }, [])
 
   return (
-    <div className="flex justify-center items-center w-full h-full p-4">
+    <div className="flex justify-center items-center w-full h-full p-0 md:p-4">
       <div className="relative w-full max-w-[360px] aspect-[9/18]"> {/* Maintain aspect ratio */}
         {/* Image overlay */}
         <img 

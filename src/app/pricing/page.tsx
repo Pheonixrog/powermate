@@ -11,7 +11,7 @@ export default function PricingPage() {
   const [isYearly, setIsYearly] = useState(false)
 
   return (
-    <div className="flex flex-col bg-[url('/background.svg')]   text-white py-20">
+    <div className="flex flex-col bg-gray-950  text-white py-20">
       <Navbar />
       <main className="flex-grow container mx-auto px-4 py-10 ">
         <h1 className="text-3xl font-bold text-center mb-8">Pricing</h1>
